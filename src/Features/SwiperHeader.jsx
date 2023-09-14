@@ -12,21 +12,21 @@ const SwiperHeader = () => {
         pagination={{
           dynamicBullets: true,
         }}
-        autoplay={{
-          delay: 7000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 7000,
+        //   disableOnInteraction: false,
+        // }}
         navigation={true}
         modules={[Pagination, Autoplay, Navigation]}
-        className="mySwiper  md:!h-[760px]  "
+        className="mySwiper !h-[782px] sm:!h-[762px]  md:!h-[727px]  "
       >
-        <SwiperSlide className="relative flex items-center sm:items-end sm:justify-start justify-center font-opensans text-white font-bold ">
+        <SwiperSlide className="relative flex items-end sm:items-end sm:justify-start justify-center font-opensans text-white font-bold ">
           <img
             className="h-screen w-screen object-cover lg:object-fill "
             src={imagem}
             alt="foto1"
           />
-          <div className="absolute sm:p-16  ">
+          <div className="absolute px-3 py-10 sm:p-16  ">
             <h1 className="text-3xl flex-wrap sm:text-4xl ">
               {" "}
               Jóias Únicas, Recordações Intemporais
@@ -42,12 +42,12 @@ const SwiperHeader = () => {
             autoPlay
             muted
             loop
-            className="scale-y-[3.1] scale-x-[2] sm:scale-y-[3.6] sm:scale-x-[1.3] md:scale-x-[1] md:scale-y-[2.5] lg:scale-x-100 lg:scale-y-[1.65] xl:scale-y-110  2xl:scale-x-100 2xl:scale-y-100"
+            className="scale-y-[3.7]   sm:scale-y-[3.1]  md:scale-y-[2.3]  lg:scale-y-[1.5] xl:scale-y-100"
           >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute sm:p-16  ">
+          <div className="absolute sm:p-16  flex flex-col items-end h-96 justify-end">
             <h1 className="text-3xl flex-wrap sm:text-4xl ">
               {" "}
               SEASONAL PROMOTION
