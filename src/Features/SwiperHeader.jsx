@@ -27,6 +27,7 @@ const SwiperHeader = () => {
             className=" h-full w-full object-cover "
             src={imagemTeste}
             alt="foto2"
+            loading="lazy"
           />
 
           <SwiperTexts
