@@ -3,7 +3,7 @@ import { PiMapPinLight } from "react-icons/pi";
 import IconsSmall from "../IconsSmall";
 const NavTop = () => {
   return (
-    <div className="max-sm:hidden flex items-center  font-opensans text-white text-xs mb-3">
+    <div className=" flex items-center  font-opensans text-white text-xs mb-3">
       <BsGlobe className="mr-1" />
       <p className="mr-5">Portugal | pt</p>
       <PiMapPinLight className="mr-2 text-[16px]" />

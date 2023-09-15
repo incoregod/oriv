@@ -9,13 +9,15 @@ const Burger = () => {
   };
 
   return (
-    <div className="sm:hidden ">
+    // <div className="sm:hidden ">
+    <>
       <PiListLight
         onClick={handleBurger}
         className="text-white text-2xl cursor-pointer"
       />
       {isOpen && <NavLinks type={"sidemenu"} handleSideBar={handleBurger} />}
-    </div>
+    </>
+    // </div>
   );
 };
 

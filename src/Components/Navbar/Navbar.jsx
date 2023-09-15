@@ -6,11 +6,15 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-gray-950 bg-opacity-50 p-3 fixed top-0 left-0 right-0 z-50">
-        <NavTop />
-        <div className="sm:hidden">
+        <div className="max-md:hidden">
+          <NavTop />
+        </div>
+        <div className="md:hidden">
           <NavSmallDev />
         </div>
-        <NavNormalDev />
+        <div className="max-md:hidden">
+          <NavNormalDev />
+        </div>
       </div>
     </>
   );

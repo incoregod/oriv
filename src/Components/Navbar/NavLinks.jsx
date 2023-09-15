@@ -15,7 +15,7 @@ const NavLinks = ({ type, handleSideBar }) => {
       } `}
     >
       <div className={style}>
-        <div className="sm:hidden border-b w-full border-opacity-50 border-gray-400 h-15 p-5 ">
+        <div className="md:hidden border-b w-full border-opacity-50 border-gray-400 h-15 p-5 ">
           <FaTimes
             onClick={handleSideBar}
             className="text-lg  cursor-pointer"
