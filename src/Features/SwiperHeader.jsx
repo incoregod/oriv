@@ -18,6 +18,7 @@ const SwiperHeader = () => {
           delay: 7000,
           disableOnInteraction: false,
         }}
+        loop={true}
         navigation={true}
         modules={[Pagination, Autoplay, Navigation]}
         className="mySwiper !h-[782px] sm:!h-[762px]  md:!h-[727px]  "
