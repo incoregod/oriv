@@ -3,9 +3,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import video from "../assets/video.mp4";
-import imagem2 from "../assets/brooke-cagle-kElEigko7PU-unsplash.jpg";
+// import imagem2 from "../assets/brooke-cagle-kElEigko7PU-unsplash.jpg";
 import "swiper/css/navigation";
 import SwiperTexts from "./SwiperTexts";
+import imagemTeste from "../assets/brooke-cagle-kElEigko7PU-unsplash.webp";
 const SwiperHeader = () => {
   return (
     <>
@@ -24,7 +25,7 @@ const SwiperHeader = () => {
         <SwiperSlide className="relative flex items-end sm:items-end sm:justify-start justify-center font-opensans text-white font-bold ">
           <img
             className=" h-full w-full object-cover "
-            src={imagem2}
+            src={imagemTeste}
             alt="foto2"
           />
 
@@ -38,7 +39,13 @@ const SwiperHeader = () => {
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center  font-opensans text-white font-bold">
-          <video autoPlay muted loop className="object-cover w-full h-full">
+          <video
+            autoPlay
+            muted
+            loop
+            preload="auto"
+            className="object-cover w-full h-full"
+          >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
