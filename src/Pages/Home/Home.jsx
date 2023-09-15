@@ -1,4 +1,4 @@
-import About from "./SubHome/About";
+import About from "./SubHome/About/About";
 import Carou from "./SubHome/Carou";
 import Header from "./SubHome/Header";
 import Purpose from "./SubHome/Purpose";
