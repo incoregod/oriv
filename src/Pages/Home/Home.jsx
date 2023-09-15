@@ -6,11 +6,11 @@ import TopProducts from "./SubHome/TopProducts";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-red-200">
       <header>
         <Header />
       </header>
-      <section>
+      <section className="bg-white">
         <About />
       </section>
       <section>

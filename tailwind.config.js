@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         firasans: ["Fira Sans", "sans-serif"],
-        playfair: ["Playfair Display", "sans-serif"],
+        playfair: ["Playfair", "serif"],
         opensans: ["Open Sans", "sans-serif"],
         italiano: ["Italianno", "cursive"],
         cormorant: ["Cormorant Garamond", "serif"],
