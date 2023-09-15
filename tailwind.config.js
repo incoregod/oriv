@@ -14,6 +14,9 @@ export default {
       height: {
         big: "38rem",
       },
+      backgroundImage: {
+        gradientgray: "linear-gradient(180deg,black, rgba(211, 211, 211, 0.4))",
+      },
     },
   },
   plugins: [],

@@ -4,6 +4,7 @@ import IconsSmall from "../IconsSmall";
 const NavTop = () => {
   return (
     <div className=" flex items-center  font-opensans text-white text-xs mb-3">
+      <h1>{console.log("NAVTOPWTF")}</h1>
       <BsGlobe className="mr-1" />
       <p className="mr-5">Portugal | pt</p>
       <PiMapPinLight className="mr-2 text-[16px]" />

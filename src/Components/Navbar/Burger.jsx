@@ -9,7 +9,6 @@ const Burger = () => {
   };
 
   return (
-    // <div className="sm:hidden ">
     <>
       <PiListLight
         onClick={handleBurger}
@@ -17,7 +16,6 @@ const Burger = () => {
       />
       {isOpen && <NavLinks type={"sidemenu"} handleSideBar={handleBurger} />}
     </>
-    // </div>
   );
 };
 
