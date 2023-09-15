@@ -23,7 +23,7 @@ const SwiperHeader = () => {
       >
         <SwiperSlide className="relative flex items-end sm:items-end sm:justify-start justify-center font-opensans text-white font-bold ">
           <img
-            className=" h-full w-screen object-cover lg:object-fill"
+            className=" h-full w-full object-cover "
             src={imagem2}
             alt="foto2"
           />
