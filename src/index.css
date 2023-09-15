@@ -10,7 +10,7 @@
 
 body {
   background-color: rgb(211, 207, 203);
-  min-width: 370px;
+  min-width: 300px;
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
