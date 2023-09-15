@@ -38,12 +38,7 @@ const SwiperHeader = () => {
           />
         </SwiperSlide>
         <SwiperSlide className="flex items-center  font-opensans text-white font-bold">
-          <video
-            autoPlay
-            muted
-            loop
-            className="scale-y-[4.7] -scale-x-100  sm:scale-y-[3.1]  md:scale-y-[2.3]  lg:scale-y-[1.5] xl:scale-y-100"
-          >
+          <video autoPlay muted loop className="object-cover w-full h-full">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
