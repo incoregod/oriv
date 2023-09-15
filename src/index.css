@@ -43,3 +43,6 @@ body {
 .swiper-button-next:hover {
   transform: scale(1.2);
 }
+.swiper-pagination-bullet-active-main {
+  background-color: white;
+}
