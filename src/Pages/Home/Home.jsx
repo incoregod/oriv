@@ -13,7 +13,7 @@ const Home = () => {
       <section className="bg-white">
         <About />
       </section>
-      <section>
+      <section className="p-5 md:px-10 2xl:p-20 bg-white">
         <Carou />
       </section>
       <main>
