@@ -5,24 +5,24 @@ const Personalizar = () => {
   return (
     <div
       className="flex flex-col 
-     gap-2 items-center justify-center text-center font-playfair lg:flex-row lg:justify-evenly"
+     gap-2 items-center justify-center text-center font-playfair lg:flex-row lg:justify-evenly "
     >
       <img
         className="object-cover  sm:h-[635px] lg:h-full w-[370px]  lg:w-[470px] 2xl:w-[670px]"
         src={foto}
         alt="foto-joias"
       />
-      <div className="flex flex-col">
-        <h1 className="text-3xl md:text-4xl font-semibold ">
+      <div className="flex flex-col  lg:border-black lg:px-10 lg:py-20 lg:border-[1px]">
+        <h1 className="text-3xl md:text-4xl 2xl:text-6xl ">
           Personalizar Jóias
         </h1>
-        <p className="text-lg md:text-xl xl:text-2xl">
+        <p className="text-lg md:text-xl xl:text-2xl ">
           Tem um pedido especial? Nós Ajudamos
         </p>
-        <div className="mt-3 hover:scale-110 ease-in-out transition-all duration-300">
+        <div className="mt-2 lg:mt-10">
           <Link
-            className="border-black border-[1px] py-1 px-4 bg-black text-white  md:text-xl  xl:text-2xl  "
-            to={""}
+            className="border-black border-[1px] py-1 px-4 xl:py-2 xl:px-6 bg-black text-white  md:text-xl  xl:text-xl hover:bg-white hover:text-gray-950 ease-in-out transition-all duration-300 "
+            to={"/servicos"}
           >
             Os Nossos Serviços
           </Link>

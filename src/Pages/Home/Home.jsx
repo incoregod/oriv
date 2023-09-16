@@ -16,7 +16,7 @@ const Home = () => {
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-white">
         <Carou />
       </section>
-      <main className="py-10 lg:py-20 bg-orange-50 ">
+      <main className="py-10 lg:py-20 bg-gradient-to-b from-white to-orange-100   ">
         <Personalizar />
       </main>
       <section>
