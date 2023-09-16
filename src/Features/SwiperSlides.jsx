@@ -29,14 +29,14 @@ const SwiperSlides = () => {
     <>
       <Swiper
         slidesPerView={renderSlides()}
-        spaceBetween={30}
+        spaceBetween={20}
         loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper-center w-screen h-[350px] lg:h-full cursor-pointer "
+        className="mySwiper-center  h-[350px] lg:h-full cursor-pointer "
       >
         <SwiperSlide className="group">
           <img src={fio} alt="fio" className="h-[90%] object-cover !w-full" />
