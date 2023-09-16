@@ -8,7 +8,7 @@ const Personalizar = () => {
      gap-2 items-center justify-center text-center font-playfair lg:flex-row lg:justify-evenly "
     >
       <img
-        className="object-cover  sm:h-[635px] lg:h-full w-[370px]  lg:w-[470px] 2xl:w-[670px] p-5"
+        className="object-cover h-[635px]  lg:h-full w-[370px]  lg:w-[470px] 2xl:w-[670px] px-5"
         src={foto}
         alt="foto-joias"
       />
