@@ -10,10 +10,10 @@ const Home = () => {
       <header>
         <Header />
       </header>
-      <section className="bg-white">
+      <section className="bg-white py-10 px-5 md:py-10 2xl:py-20">
         <About />
       </section>
-      <section className="p-5 md:px-10 2xl:p-20 bg-white">
+      <section className="p-5 md:px-10 lg:p-20 bg-white">
         <Carou />
       </section>
       <main>

@@ -2,7 +2,7 @@ import AboutText from "./AboutText";
 
 const About = () => {
   return (
-    <div className="py-20 px-5 2xl:py-36  flex  items-center justify-center flex-col text-gray-800 ">
+    <div className="  flex  items-center justify-center flex-col text-gray-800 ">
       <AboutText
         style={"border-[1px] border-black p-10"}
         text={
