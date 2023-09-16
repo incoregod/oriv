@@ -36,13 +36,15 @@ const SwiperSlides = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper-center w-full h-full cursor-pointer "
+        className="mySwiper-center w-screen h-[450px] lg:h-full cursor-pointer "
       >
         <SwiperSlide className="group">
-          <img src={fio} alt="fio" className="h-[100%] object-cover !w-full" />
+          <img src={fio} alt="fio" className="h-[95%] object-cover !w-full" />
 
           <div className="flex items-center justify-between">
-            <p className="text-xl group-hover:underline decoration-1 ">Fios</p>
+            <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
+              Fios
+            </p>
             <BsArrowRight className="mr-5 group-hover:mr-0 transition-all duration-1500 ease-in-out" />
           </div>
         </SwiperSlide>
@@ -50,10 +52,10 @@ const SwiperSlides = () => {
           <img
             src={pulseira}
             alt="Pulseiras"
-            className="h-[100%]  object-cover !w-full"
+            className="h-[95%]  object-cover !w-full"
           />
           <div className="flex items-center justify-between">
-            <p className="text-xl group-hover:underline decoration-1 ">
+            <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
               Pulseiras
             </p>
             <BsArrowRight className="mr-5 group-hover:mr-0 transition-all duration-1500 ease-in-out" />
@@ -63,10 +65,10 @@ const SwiperSlides = () => {
           <img
             src={brincos}
             alt="Brincos"
-            className="h-[100%] object-cover !w-full"
+            className="h-[95%] object-cover !w-full"
           />
           <div className="flex items-center justify-between">
-            <p className="text-xl group-hover:underline decoration-1 ">
+            <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
               Brincos
             </p>
             <BsArrowRight className="mr-5 group-hover:mr-0 transition-all duration-1500 ease-in-out" />
@@ -76,10 +78,12 @@ const SwiperSlides = () => {
           <img
             src={anel}
             alt="Aneis"
-            className=" h-[100%] object-cover !w-full"
+            className=" h-[95%] object-cover !w-full"
           />
           <div className="flex items-center justify-between">
-            <p className="text-xl group-hover:underline decoration-1 ">Aneis</p>
+            <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
+              Aneis
+            </p>
             <BsArrowRight className="mr-5 group-hover:mr-0 transition-all duration-1500 ease-in-out" />
           </div>
         </SwiperSlide>
