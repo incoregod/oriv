@@ -36,10 +36,10 @@ const SwiperSlides = () => {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper-center w-screen h-[450px] lg:h-full cursor-pointer "
+        className="mySwiper-center w-screen h-[350px] lg:h-full cursor-pointer "
       >
         <SwiperSlide className="group">
-          <img src={fio} alt="fio" className="h-[95%] object-cover !w-full" />
+          <img src={fio} alt="fio" className="h-[90%] object-cover !w-full" />
 
           <div className="flex items-center justify-between">
             <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
@@ -52,7 +52,7 @@ const SwiperSlides = () => {
           <img
             src={pulseira}
             alt="Pulseiras"
-            className="h-[95%]  object-cover !w-full"
+            className="h-[90%]  object-cover !w-full"
           />
           <div className="flex items-center justify-between">
             <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
@@ -65,7 +65,7 @@ const SwiperSlides = () => {
           <img
             src={brincos}
             alt="Brincos"
-            className="h-[95%] object-cover !w-full"
+            className="h-[90%] object-cover !w-full"
           />
           <div className="flex items-center justify-between">
             <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
@@ -78,7 +78,7 @@ const SwiperSlides = () => {
           <img
             src={anel}
             alt="Aneis"
-            className=" h-[95%] object-cover !w-full"
+            className=" h-[90%] object-cover !w-full"
           />
           <div className="flex items-center justify-between">
             <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">
