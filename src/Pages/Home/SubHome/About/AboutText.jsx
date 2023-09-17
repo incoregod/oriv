@@ -1,7 +1,7 @@
 const AboutText = ({ text, style, textStyle }) => {
   return (
     <div
-      className={`w-[250px] sm:w-[450px] lg:w-[650px]  2xl:w-[950px] ${style}`}
+      className={`w-[350px] sm:w-[450px] lg:w-[650px]  2xl:w-[950px] ${style}`}
     >
       <h1
         className={`${
