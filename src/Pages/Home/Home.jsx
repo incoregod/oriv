@@ -1,6 +1,7 @@
 import About from "./SubHome/About/About";
 import Carou from "./SubHome/Carou";
 import Header from "./SubHome/Header";
+import LatestProducts from "./SubHome/LatestProducts";
 import Personalizar from "./SubHome/Personalizar";
 import TopProducts from "./SubHome/TopProducts";
 
@@ -19,8 +20,11 @@ const Home = () => {
       <main className="py-10 lg:py-20 bg-white  ">
         <Personalizar />
       </main>
-      <section className="py-10 px-5 ">
+      <section className="py-10 px-5 md:px-10 lg:p-20 bg-white">
         <TopProducts />
+      </section>
+      <section className="py-10 px-5 md:px-10 lg:p-20 bg-white lg:text-left text-center">
+        <LatestProducts />
       </section>
     </div>
   );
