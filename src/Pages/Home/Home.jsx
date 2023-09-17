@@ -19,7 +19,7 @@ const Home = () => {
       <main className="py-10 lg:py-20 bg-white  ">
         <Personalizar />
       </main>
-      <section>
+      <section className="py-10 px-5 ">
         <TopProducts />
       </section>
     </div>
