@@ -15,12 +15,14 @@ const NavLinks = ({ type, handleSideBar }) => {
       } `}
     >
       <div className={style}>
-        <div className="md:hidden border-b w-full border-opacity-50 border-gray-400 h-15 p-5 ">
-          <FaTimes
-            onClick={handleSideBar}
-            className="text-lg  cursor-pointer"
-          />
-        </div>
+        {type && (
+          <div className=" border-b w-full border-opacity-50 border-gray-400 h-15 p-5 ">
+            <FaTimes
+              onClick={handleSideBar}
+              className="text-lg  cursor-pointer"
+            />
+          </div>
+        )}
         <Link
           className={
             type &&

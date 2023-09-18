@@ -7,6 +7,7 @@ import Sobre from "./Pages/Sobre/Sobre";
 import Servicos from "./Pages/Servicos/Servicos";
 import Guia from "./Pages/Guia/Guia";
 import Contactos from "./Pages/Contactos/Contactos";
+import Footer from "./Components/Footer/Footer";
 function App() {
   const element = useRoutes([
     {
@@ -42,6 +43,7 @@ function App() {
     <>
       <Navbar />
       <div>{element}</div>
+      <Footer />
     </>
   );
 }
