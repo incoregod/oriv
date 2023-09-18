@@ -13,7 +13,7 @@ const Personalizar = () => {
         src={foto}
         alt="foto-joias"
       />
-      <Parallax translateX={[10, 0]} rotateZ={5}>
+      <Parallax translateX={[10, 0]}>
         <div className="flex flex-col  lg:border-black lg:px-10 lg:py-20 lg:border-[1px]">
           <h1 className="text-3xl md:text-4xl 2xl:text-6xl ">
             Personalizar Jóias

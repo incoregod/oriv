@@ -28,14 +28,12 @@ const Home = () => {
         </Parallax>
       </main>
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-gradient-to-b from-orange-50 via-orange-50  to-white">
-        <Parallax translateY={[0, -30]}>
+        <Parallax translateY={[0, -10]}>
           <TopProducts />
         </Parallax>
       </section>
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-white lg:text-left text-center">
-        <Parallax translateY={[-10, 0]}>
-          <LatestProducts />
-        </Parallax>
+        <LatestProducts />
       </section>
     </div>
   );
