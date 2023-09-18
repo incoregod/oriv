@@ -1,20 +1,25 @@
 import { BsPerson, BsGlobe } from "react-icons/bs";
 import { PiMapPinLight } from "react-icons/pi";
 import IconsSmall from "../IconsSmall";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../../Firebase/Firebase";
+
 import { useAuthState } from "react-firebase-hooks/auth";
+import {
+  signInWithGooglePopup,
+  signOutUser,
+  auth,
+} from "../../Firebase/Firebase";
 
 const NavTop = () => {
   const [user, loading] = useAuthState(auth);
-  const googleProvider = new GoogleAuthProvider();
-  const GoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-    } catch (error) {
-      console.log(error);
-    }
+
+  const googleLogin = () => {
+    signInWithGooglePopup();
   };
+
+  const googleLogout = () => {
+    signOutUser();
+  };
+
   return (
     <div className=" flex items-center  font-opensans text-white text-xs mb-3">
       <BsGlobe className="mr-1" />
@@ -24,7 +29,7 @@ const NavTop = () => {
       {!user && (
         <div className="flex items-center gap-1">
           <BsPerson />
-          <p className="cursor-pointer" onClick={GoogleLogin}>
+          <p className="cursor-pointer" onClick={googleLogin}>
             {" "}
             Iniciar sessão
           </p>
@@ -38,7 +43,7 @@ const NavTop = () => {
           <img
             className="object-cover rounded-full w-8 cursor-pointer"
             src={auth.currentUser.photoURL}
-            onClick={() => auth.signOut()}
+            onClick={googleLogout}
           />
           <IconsSmall type={"heart"} color={"white"} />
         </div>
