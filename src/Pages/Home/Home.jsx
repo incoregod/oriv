@@ -17,10 +17,10 @@ const Home = () => {
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-white">
         <Carou />
       </section>
-      <main className="py-10 lg:py-20 bg-white  ">
+      <main className="py-10 lg:py-20 bg-gradient-to-b from-white via-orange-50  to-orange-100  ">
         <Personalizar />
       </main>
-      <section className="py-10 px-5 md:px-10 lg:p-20 bg-white">
+      <section className="py-10 px-5 md:px-10 lg:p-20 bg-gradient-to-b from-orange-100 via-orange-50  to-white">
         <TopProducts />
       </section>
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-white lg:text-left text-center">
