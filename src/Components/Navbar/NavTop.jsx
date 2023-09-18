@@ -1,4 +1,3 @@
-import { PiMapPinLight } from "react-icons/pi";
 import IconsSmall from "../IconsSmall";
 import Icons from "../Icons/Icons";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -12,7 +11,7 @@ const NavTop = () => {
     <div className=" flex items-center  font-opensans text-white text-xs mb-3">
       <Icons icon={"globe"} styles={"mr-1"} />
       <p className="mr-5">Portugal | pt</p>
-      <PiMapPinLight className="mr-2 text-[16px]" />
+      <Icons icon={"pin"} styles={"mr-2 text-[16px]"} />
       <p className="mr-auto cursor-pointer">Loja</p>
       {!user && (
         <div className="flex items-center gap-1">
