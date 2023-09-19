@@ -2,8 +2,12 @@ import fio from "../../../assets/fio.jpg";
 import anel from "../../../assets/anel.jpg";
 import pulseira from "../../../assets/pulseira.jpg";
 import { Link } from "react-router-dom";
+import { CategoriesContext } from "../../../Context/CategoriesProvider";
+import { useContext } from "react";
 
 const LatestProducts = () => {
+  const { categories } = useContext(CategoriesContext);
+  console.log(categories);
   return (
     <>
       <h2 className="mb-12 text-center text-3xl  lg:text-4xl 2xl:text-6xl font-playfair">
