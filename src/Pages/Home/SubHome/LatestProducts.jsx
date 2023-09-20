@@ -5,7 +5,6 @@ import { urlFor } from "../../../../client";
 const LatestProducts = () => {
   const { produtos } = useContext(CategoriesContext);
 
-  console.log(produtos);
   const element = produtos.map((item) => {
     if (!item.tags) return;
     if (item.tags.includes("recentes")) {
