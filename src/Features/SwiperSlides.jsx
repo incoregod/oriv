@@ -46,13 +46,13 @@ const SwiperSlides = ({ categorias }) => {
       <Swiper
         slidesPerView={renderSlides()}
         spaceBetween={20}
-        loop={true}
+        loop={false}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper-center  h-[350px] lg:h-full cursor-pointer "
+        className="mySwiper-center  h-[350px] lg:h-full cursor-grab "
       >
         {element}
       </Swiper>
