@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import SearchCartIcons from "./SearchCartIcons";
 import { FaTimes } from "react-icons/fa";
-
 import NavFooter from "./NavFooter";
+import Routes from "./Routes";
 
 const NavLinks = ({ type, handleSideBar }) => {
   const style = !type
@@ -23,69 +22,9 @@ const NavLinks = ({ type, handleSideBar }) => {
             />
           </div>
         )}
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/colecoes"}
-        >
-          {" "}
-          Coleções
-        </Link>
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/mulher"}
-        >
-          {" "}
-          Mulher
-        </Link>
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/sobre"}
-        >
-          {" "}
-          Sobre Mim
-        </Link>
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/servicos"}
-        >
-          {" "}
-          Serviços
-        </Link>
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/guia"}
-        >
-          {" "}
-          Guia De Compra
-        </Link>
-        <Link
-          className={
-            type &&
-            "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "
-          }
-          to={"/contactos"}
-        >
-          {" "}
-          Contactos
-        </Link>
+        <Routes type={type} />
         {type && <NavFooter />}
       </div>
-
       {!type && <SearchCartIcons />}
     </div>
   );

@@ -1,29 +1,38 @@
-import { BsPerson, BsGlobe } from "react-icons/bs";
+import { BsPerson, BsGlobe, BsSearch } from "react-icons/bs";
 import { PiMapPinLight } from "react-icons/pi";
 import { BsSuitHeart } from "react-icons/bs";
 import { PiShoppingBagOpenThin } from "react-icons/pi";
 
-const Icons = ({ icon, styles }) => {
+const Icons = ({ children, icon, styles }) => {
+  let renderEl;
   switch (icon) {
     case "person":
-      return <BsPerson className={styles} />;
-
+      renderEl = <BsPerson className={styles} />;
+      break;
     case "globe":
-      return <BsGlobe className={styles} />;
-
+      renderEl = <BsGlobe className={styles} />;
+      break;
     case "pin":
-      return <PiMapPinLight className={styles} />;
-
+      renderEl = <PiMapPinLight className={styles} />;
+      break;
     case "heart":
-      return <BsSuitHeart className={styles} />;
-
+      renderEl = <BsSuitHeart className={styles} />;
+      break;
     case "shopcart":
-      return <PiShoppingBagOpenThin className={styles} />;
-
+      renderEl = <PiShoppingBagOpenThin className={styles} />;
+      break;
+    case "search":
+      renderEl = <BsSearch className={styles} />;
+      break;
     default:
       break;
   }
-  return <>{icon}</>;
+  return (
+    <div>
+      {renderEl}
+      {children}
+    </div>
+  );
 };
 
 export default Icons;

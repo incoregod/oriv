@@ -1,5 +1,4 @@
 import { signInWithGooglePopup, signOutUser } from "../../Firebase/Firebase";
-import IconsSmall from "../IconsSmall";
 import { auth } from "../../Firebase/Firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 const NavLogUsers = () => {
@@ -33,7 +32,6 @@ const NavLogUsers = () => {
           <p className="text-[10px] font-playfair">
             {auth.currentUser.displayName}
           </p>
-          <IconsSmall type={"heart"} color={"white"} />
         </div>
       )}
     </>
