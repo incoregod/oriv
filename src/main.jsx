@@ -7,13 +7,13 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import CategoriesProvider from "./Context/CategoriesProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <ParallaxProvider>
-      <BrowserRouter>
-        <CategoriesProvider>
-          <App />
-        </CategoriesProvider>
-      </BrowserRouter>
-    </ParallaxProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <ParallaxProvider>
+    <BrowserRouter>
+      <CategoriesProvider>
+        <App />
+      </CategoriesProvider>
+    </BrowserRouter>
+  </ParallaxProvider>
+  // </React.StrictMode>
 );

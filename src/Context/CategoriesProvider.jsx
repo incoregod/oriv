@@ -1,48 +1,48 @@
-import { createContext, useState, useEffect } from "react";
-import { client, urlFor } from "../../client";
+import { createContext, useState, useEffect, useCallback } from "react";
+import { client } from "../../client";
 export const CategoriesContext = createContext();
-
-// {categoriesMap: {},}
 
 export const CategoriesProvider = ({ children }) => {
   const [categoriesData, setCategoriesData] = useState([]);
-  const [produtosData, setProdutosData] = useState([]);
   const [produtos, setProdutos] = useState([]);
   const [categorias, setCategorias] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const query =
-      '*[_type == "produtos"] {title, imgUrl, tags,description,price, "Categoria": categoria->categoria, _id}';
+    const fetchData = async () => {
+      try {
+        const produtosQuery =
+          '*[_type == "produtos"] {title, imgUrl, tags,description,price, "Categoria": categoria->categoria, _id}';
+        const categoriasQuery = '*[_type == "categorias"]';
 
-    client.fetch(query).then((data) => setProdutosData(data));
+        const [produtos, categorias] = await Promise.all([
+          client.fetch(produtosQuery),
+          client.fetch(categoriasQuery),
+        ]);
+        setCategoriesData(categorias);
+        setProdutos(produtos);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+        setIsLoading(false);
+      }
+    };
+    fetchData();
   }, []);
 
-  useEffect(() => {
-    const query = '*[_type == "categorias"]';
-    client.fetch(query).then((data) => setCategoriesData(data));
-  }, []);
+  const categoriasSet = useCallback(() => {
+    const result = categoriesData.map((item) => item);
+    setCategorias(result);
+  }, [categoriesData]);
 
   useEffect(() => {
     categoriasSet();
-  }, [categoriesData]);
-
-  function categoriasSet() {
-    const result = categoriesData.map((item) => item);
-    setCategorias(result);
-  }
-
-  useEffect(() => {
-    produtosSet();
-  }, [produtosData]);
-
-  function produtosSet() {
-    setProdutos(produtosData);
-  }
+  }, [categoriasSet]);
 
   const values = { produtos, categorias };
   return (
     <CategoriesContext.Provider value={values}>
-      {children}
+      {isLoading ? <div>Loading...</div> : children}
     </CategoriesContext.Provider>
   );
 };
