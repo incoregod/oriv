@@ -1,8 +1,14 @@
-# React + Vite
+#Jewelry Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sanity is a CMS (Content Management System) where schemas have been built to allow the website owner to manage products by categories, tags, and more through the admin panel access link.
 
-Currently, two official plugins are available:
+On the front end, the content is rendered according to the owner's preferences through asynchronous methods.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Firebase/auth is being used to manage Google login.
+
+This is a website being developed using:
+React.js, Tailwind CSS, Sanity CMS, Firebase, parallax, react-router-dom, context API, Vite, hooks, local storage, best practices, reusable components, SEO, and performance.
+
+https://imgur.com/a/JvTPF0z
+
+Work in progress\*
