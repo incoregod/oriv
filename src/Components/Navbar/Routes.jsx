@@ -22,6 +22,7 @@ const Routes = ({ type }) => {
     <Link
       key={route}
       to={`/${route}`}
+      aria-label={route}
       className={
         type &&
         "border-b w-full border-opacity-50 border-gray-400 h-15 pt-0 p-5 "

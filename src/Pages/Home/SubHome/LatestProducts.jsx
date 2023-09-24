@@ -11,9 +11,10 @@ const LatestProducts = () => {
       return (
         <div key={item._id} className="mb-12 lg:mb-0">
           <div className="relative mb-6 overflow-hidden  bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]">
-            <Link to={"/produtos"}>
+            <Link to={"/produtos"} aria-label="Link to produtos">
               <img
                 src={urlFor(item.imgUrl)}
+                alt={`${item.title} image`}
                 className="w-full  transition-all ease-in-out duration-300 hover:brightness-110"
               />
             </Link>

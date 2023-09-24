@@ -8,7 +8,7 @@ const NavNormalDev = () => {
       <NavTop />
       <div className=" flex flex-row items-center justify-center text-white gap-2 ">
         <img className="w-28 invert" src={logo} alt="carol-logo" />
-        <Link to={"/"}>
+        <Link to={"/"} aria-label="Link To Home">
           <h1 className="font-cormorant text-5xl tracking-wider ">
             CAROLINE BORGES
           </h1>

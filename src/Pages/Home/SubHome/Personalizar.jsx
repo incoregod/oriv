@@ -25,6 +25,7 @@ const Personalizar = () => {
             <Link
               className="border-black border-[1px] py-1 px-4 xl:py-2 xl:px-6 bg-black text-white  md:text-xl  xl:text-xl hover:bg-white hover:text-gray-950 ease-in-out transition-all duration-300 "
               to={"/servicos"}
+              aria-label="Link to serviços"
             >
               Os Nossos Serviços
             </Link>
