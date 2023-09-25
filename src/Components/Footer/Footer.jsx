@@ -67,7 +67,7 @@ const Footer = () => {
         <h6 className="mb-4  font-semibold uppercase ">{link.title}</h6>
         {link.links.map((item) => (
           <Link to={item.url} key={item.name}>
-            <p>{item.name}</p>
+            <p className="mb-2">{item.name}</p>
           </Link>
         ))}
       </div>
