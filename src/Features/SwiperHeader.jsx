@@ -3,7 +3,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
 import video from "../assets/video.mp4";
-// import imagem2 from "../assets/brooke-cagle-kElEigko7PU-unsplash.jpg";
 import "swiper/css/navigation";
 import SwiperTexts from "./SwiperTexts";
 import imagemTeste from "../assets/brooke-cagle-kElEigko7PU-unsplash.webp";
