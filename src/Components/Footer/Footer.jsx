@@ -1,6 +1,6 @@
-import { BsFacebook, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import FooterContacts from "./FooterContacts";
+import FooterSocials from "./FooterSocials";
 
 const Footer = () => {
   const useLinks = [
@@ -77,41 +77,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left font-playfair mt-20 2xl:mt-20">
-        <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-evenly">
-          <div className="mr-12 hidden lg:block">
-            <span>Juntar-se às nossas redes sociais:</span>
-          </div>
-
-          <div className="flex justify-center">
-            <a
-              href="https://www.facebook.com/atelier.caroline.borges/"
-              rel="noreferrer"
-              target="_blank"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
-            >
-              <BsFacebook />
-            </a>
-
-            <a
-              href="https://www.facebook.com/atelier.caroline.borges/"
-              rel="noreferrer"
-              target="_blank"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
-            >
-              <BsInstagram />
-            </a>
-
-            <a
-              href="https://www.facebook.com/atelier.caroline.borges/"
-              rel="noreferrer"
-              target="_blank"
-              className="mr-6 text-neutral-600 dark:text-neutral-200"
-            >
-              <BsPinterest />
-            </a>
-          </div>
-        </div>
-
+        <FooterSocials />
         <div className="mx-6 py-10 text-center md:text-center lg:text-left ">
           <div className="grid-1 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
             {elements}
