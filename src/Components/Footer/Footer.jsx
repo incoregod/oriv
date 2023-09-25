@@ -1,15 +1,79 @@
-import {
-  BsFacebook,
-  BsInstagram,
-  BsPinterest,
-  BsHouse,
-  BsEnvelopeOpen,
-  BsTelephone,
-  BsClock,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsPinterest } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import FooterContacts from "./FooterContacts";
 
 const Footer = () => {
+  const useLinks = [
+    {
+      title: "CAROLINE BORGES",
+      links: [
+        {
+          name: "+ Sobre mim",
+          url: "/sobre",
+        },
+        {
+          name: "+ Catálogos Digitais",
+          url: "/catalogos",
+        },
+      ],
+    },
+    {
+      title: "PRODUCTS",
+      links: [
+        {
+          name: "+ Coleção Mulher",
+          url: "/mulher",
+        },
+        {
+          name: "+ Coleção Homem",
+          url: "/homem",
+        },
+        {
+          name: "+ Coleção Cereja",
+          url: "/cereja",
+        },
+        {
+          name: "+ Coleção Inverno",
+          url: "/inverno",
+        },
+      ],
+    },
+    {
+      title: "APOIO AO CLIENTE",
+      links: [
+        {
+          name: "+ Questões Frequentes",
+          url: "/questoes",
+        },
+        {
+          name: "+ Guia de Tamanhos",
+          url: "/guia",
+        },
+        {
+          name: "+ Trocas e Devoluções",
+          url: "/trocas",
+        },
+        {
+          name: "+ Envios e Encomendas",
+          url: "/envios",
+        },
+      ],
+    },
+  ];
+
+  const elements = useLinks.map((link) => {
+    return (
+      <div className="mb-10 md:mb-20" key={link.title}>
+        <h6 className="mb-4  font-semibold uppercase ">{link.title}</h6>
+        {link.links.map((item) => (
+          <Link to={item.url} key={item.name}>
+            <p>{item.name}</p>
+          </Link>
+        ))}
+      </div>
+    );
+  });
+
   return (
     <>
       <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left font-playfair mt-20 2xl:mt-20">
@@ -50,126 +114,8 @@ const Footer = () => {
 
         <div className="mx-6 py-10 text-center md:text-center lg:text-left ">
           <div className="grid-1 grid gap-2 md:grid-cols-2 lg:grid-cols-4">
-            <div className="mb-10 md:mb-20">
-              <h6 className="mb-4  font-semibold uppercase ">
-                Caroline Borges
-              </h6>
-              <p className=" p-2">
-                <Link to={"/sobre"}>+ Sobre mim</Link>
-              </p>
-              <p className=" p-2">
-                <Link to={"/sobre"}>+ Catálogos Digitais</Link>
-              </p>
-            </div>
-
-            <div className="mb-10 md:mb-20">
-              <h6 className="mb-4  font-semibold uppercase ">Products</h6>
-
-              <p className="p-2">
-                {" "}
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Coleção Mulher
-                </Link>
-              </p>
-              <p className="p-2">
-                {" "}
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Coleção Homem
-                </Link>
-              </p>
-              <p className="p-2">
-                {" "}
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Coleção Cereja
-                </Link>
-              </p>
-              <p className="p-2">
-                {" "}
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Coleção Inverno
-                </Link>
-              </p>
-            </div>
-
-            <div className="mb-10 md:mb-20">
-              <h6 className="mb-4 font-semibold uppercase ">
-                Apoio ao Cliente
-              </h6>
-              <p className="p-2">
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Questões Frequentes
-                </Link>
-              </p>
-              <p className="p-2">
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Guia de Tamanhos
-                </Link>
-              </p>
-              <p className="p-2">
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Trocas e Devoluções
-                </Link>
-              </p>
-
-              <p className="p-2">
-                <Link
-                  to={"/"}
-                  className=" text-neutral-600 dark:text-neutral-200"
-                >
-                  + Envios e Encomendas
-                </Link>
-              </p>
-            </div>
-
-            <div className=" flex flex-col items-center lg:items-start">
-              <h6 className="mb-4  font-semibold uppercase ">Contactos</h6>
-
-              <p className="flex items-center gap-2 p-2 text-xs md:text-[0.9rem]">
-                <BsHouse />
-                Praça do Município, nº 7, Fundão, Pt
-              </p>
-
-              <p className="flex items-center gap-2 p-2 text-xs md:text-[0.9rem]">
-                <BsEnvelopeOpen />
-                carolinediasborges@gmail.com
-              </p>
-
-              <p className="flex items-center gap-2 p-2 text-xs md:text-[0.9rem]">
-                <BsTelephone />+ 351 275 182 071
-              </p>
-
-              <p className="flex items-start gap-2 p-2 text-xs md:text-[0.9rem] ">
-                <BsClock />
-                Segunda a Sexta 10:00 às 13:00
-                <br /> - 15:00 às 19:00
-              </p>
-
-              <p className="flex items-center gap-2 p-2 text-xs md:text-[0.9rem] ">
-                <BsClock />
-                Sábado 10:00 às 13:00
-              </p>
-            </div>
+            {elements}
+            <FooterContacts />
           </div>
         </div>
 
