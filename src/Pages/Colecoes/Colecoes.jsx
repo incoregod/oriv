@@ -1,5 +1,5 @@
 const Colecoes = () => {
-  return <div>Colecoes</div>;
+  return <div className="mt-40"></div>;
 };
 
 export default Colecoes;

@@ -1,5 +1,11 @@
+import SideBar from "./SideBar";
+
 const Mulher = () => {
-  return <div>Mulher</div>;
+  return (
+    <div className="mt-40">
+      <SideBar type={"Mulher"} />
+    </div>
+  );
 };
 
 export default Mulher;
