@@ -42,7 +42,7 @@ export const CategoriesProvider = ({ children }) => {
   const values = { produtos, categorias };
   return (
     <CategoriesContext.Provider value={values}>
-      {isLoading ? <div>Loading...</div> : children}
+      {isLoading ? <div></div> : children}
     </CategoriesContext.Provider>
   );
 };
