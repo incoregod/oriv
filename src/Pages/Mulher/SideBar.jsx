@@ -105,7 +105,7 @@ export default function SideBar({ type }) {
                       className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
                       onClick={() => setMobileFiltersOpen(false)}
                     >
-                      <span className="sr-only">Close menu</span>
+                      <span className="sr-only">Fechar menu</span>
                       <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                   </div>
