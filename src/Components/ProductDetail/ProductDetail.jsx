@@ -13,14 +13,14 @@ const ProductDetail = () => {
     if (productId === produto._id) {
       return (
         <div key={produto._id} className=" mb-36">
-          <div className="grid grid-cols-2 items-start justify-center p-20 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-center p-5 xl:p-20 gap-16">
             <div>
               <img
                 className="w-[60rem] h-[40rem] object-cover mb-5"
                 src={urlFor(produto.imgUrl)}
                 alt="imagem"
               />
-              <div className="grid grid-cols-4 gap-5 ">
+              <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 ">
                 <img src={urlFor(produto.imgUrl)} alt={produto.title} />
                 <img src={urlFor(produto.imgUrl)} alt={produto.title} />
                 <img src={urlFor(produto.imgUrl)} alt={produto.title} />
@@ -51,7 +51,7 @@ const ProductDetail = () => {
                   Details The 6-Pack includes two black, two white, and two
                   heather gray Basic Tees. Sign up for our subscription service
                   and be the first to get new, exciting colors, like our
-                  upcoming "Charcoal Gray" limited release.
+                  upcoming limited release.
                 </p>
               </div>
               {produto.Categoria === "Anéis" && (
@@ -109,10 +109,9 @@ const ProductDetail = () => {
     }
   });
 
-  console.log("name", productId);
   return (
     <>
-      <div className="bg-gradient-to-b from-white via-gray-400  to-gray-50 top-0 h-80"></div>
+      <div className="bg-gradient-to-b from-white via-gray-400  to-gray-50 top-0 h-20 md:h-80"></div>
       {myElement}
     </>
   );
