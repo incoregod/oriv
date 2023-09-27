@@ -8,6 +8,7 @@ import Servicos from "./Pages/Servicos/Servicos";
 import Guia from "./Pages/Guia/Guia";
 import Contactos from "./Pages/Contactos/Contactos";
 import Footer from "./Components/Footer/Footer";
+import ProductDetail from "./Components/ProductDetail/ProductDetail";
 function App() {
   const element = useRoutes([
     {
@@ -21,6 +22,10 @@ function App() {
     {
       element: <Mulher />,
       path: "/mulher",
+    },
+    {
+      element: <ProductDetail />,
+      path: "/mulher/:productId",
     },
     {
       element: <Sobre />,

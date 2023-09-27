@@ -3,6 +3,12 @@ import FooterContacts from "./FooterContacts";
 import FooterSocials from "./FooterSocials";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const useLinks = [
     {
       title: "CAROLINE BORGES",
@@ -66,7 +72,7 @@ const Footer = () => {
       <div className="mb-10 md:mb-20" key={link.title}>
         <h6 className="mb-4  font-semibold uppercase ">{link.title}</h6>
         {link.links.map((item) => (
-          <Link to={item.url} key={item.name}>
+          <Link to={item.url} key={item.name} onClick={scrollToTop}>
             <p className="mb-2">{item.name}</p>
           </Link>
         ))}

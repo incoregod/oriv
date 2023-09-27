@@ -1,4 +1,9 @@
-import { BsChevronDown, BsFillGridFill, BsChevronUp } from "react-icons/bs";
+import {
+  BsChevronDown,
+  BsFillGridFill,
+  BsChevronUp,
+  BsFillFunnelFill,
+} from "react-icons/bs";
 
 const SideBarMain = ({ filtroOpen, handleFiltro, sortOptions }) => {
   return (
@@ -28,6 +33,7 @@ const SideBarMain = ({ filtroOpen, handleFiltro, sortOptions }) => {
             onClick={handleFiltro}
           />
         )}
+        <BsFillFunnelFill className="ml-5 md:hidden" />
         <BsFillGridFill className="ml-5" />
       </div>
       <hr className="w-[97%] m-auto" />

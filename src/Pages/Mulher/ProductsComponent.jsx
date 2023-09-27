@@ -1,16 +1,19 @@
 import ProductCard from "../../Components/Cards/ProductCard";
 import Ratings from "../../Components/Ratings/Ratings";
 import { urlFor } from "../../../client";
+import { Link } from "react-router-dom";
 const ProductsComponent = ({ produtos }) => {
   return (
     <div className="col-span-5 grid grid-cols-1 sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8">
       {produtos.map((item) => (
         <ProductCard key={item._id}>
-          <img
-            className="object-cover h-80 w-full rounded-t-lg "
-            src={urlFor(item.imgUrl)}
-            alt={item.title}
-          />
+          <Link to={`/mulher/${item._id}`}>
+            <img
+              className="object-cover h-80 w-full rounded-t-lg "
+              src={urlFor(item.imgUrl)}
+              alt={item.title}
+            />
+          </Link>
           <div className="p-2 font-playfair flex flex-col gap-1">
             <div className="flex gap-5">
               <p className="text-xs border px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all ease-in-out duration-300">
