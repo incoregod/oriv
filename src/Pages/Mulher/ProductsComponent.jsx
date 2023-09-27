@@ -13,10 +13,12 @@ const ProductsComponent = ({ produtos }) => {
           />
           <div className="p-2 font-playfair flex flex-col gap-1">
             <div className="flex gap-5">
-              <p className="text-xs border px-2 py-1 ">{item.Categoria} </p>
+              <p className="text-xs border px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all ease-in-out duration-300">
+                {item.Categoria}
+              </p>
               {item.tags && (
-                <p className="text-xs border px-2 py-1 bg-gray-200">
-                  {item.tags}{" "}
+                <p className="text-xs border px-2 py-1 bg-gray-200 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300">
+                  {item.tags}
                 </p>
               )}
             </div>
