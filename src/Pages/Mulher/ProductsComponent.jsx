@@ -3,7 +3,7 @@ import Ratings from "../../Components/Ratings/Ratings";
 import { urlFor } from "../../../client";
 const ProductsComponent = ({ produtos }) => {
   return (
-    <div className="col-span-5 grid grid-cols-1 md:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8">
+    <div className="col-span-5 grid grid-cols-1 sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8">
       {produtos.map((item) => (
         <ProductCard key={item._id}>
           <img
