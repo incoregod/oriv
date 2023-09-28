@@ -1,8 +1,9 @@
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SideBarComponent from "../../Components/SideBarComponent/SideBarComponent";
 const SmSideFilter = ({ handleSmDevicesFilter, categorias, render }) => {
   return (
-    <div className="flex flex-col bg-white h-screen w-60 fixed top-0 right-0 z-40  md:hidden overflow-y-auto py-12">
+    <SideBarComponent position={{ top: "top-0", side: "right-0" }}>
       <div className=" border-b w-full border-opacity-50 border-gray-400 h-15 p-5 ">
         <FaTimes
           onClick={handleSmDevicesFilter}
@@ -25,7 +26,7 @@ const SmSideFilter = ({ handleSmDevicesFilter, categorias, render }) => {
         <hr />
         {render}
       </div>
-    </div>
+    </SideBarComponent>
   );
 };
 
