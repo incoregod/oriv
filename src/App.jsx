@@ -19,10 +19,10 @@ function App() {
       element: <Mulher />,
       path: "/mulher",
     },
-    // {
-    //   element: <ProductDetail />,
-    //   path: "/mulher/:productId",
-    // },
+    {
+      element: <ProductDetail />,
+      path: "/mulher/:colecao/:productName",
+    },
     {
       element: <ColectionsProduct />,
       path: "/mulher/:colecao",

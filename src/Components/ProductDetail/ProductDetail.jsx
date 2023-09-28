@@ -6,11 +6,11 @@ import { CategoriesContext } from "../../Context/CategoriesProvider";
 import { urlFor } from "../../../client";
 import Icons from "../Icons/Icons";
 const ProductDetail = () => {
-  const { productId } = useParams();
+  const { productName } = useParams();
   const { produtos } = useContext(CategoriesContext);
 
   const myElement = produtos.map((produto) => {
-    if (productId === produto._id) {
+    if (productName === produto.title) {
       return (
         <div key={produto._id} className=" mb-36">
           <div className="grid grid-cols-1 md:grid-cols-2 items-start justify-center p-5 xl:p-20 gap-16">

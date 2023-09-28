@@ -10,7 +10,10 @@ const ProductsComponent = ({ produtos, type, colecao }) => {
         (item) =>
           item.Coleção === colecao && (
             <ProductCard key={item._id}>
-              <Link to={`/${type}/${item._id}`} onClick={scrollTopHook()}>
+              <Link
+                to={`/${type}/${colecao}/${item.title}`}
+                onClick={scrollTopHook()}
+              >
                 <img
                   className="object-cover h-80 w-full  "
                   src={urlFor(item.imgUrl)}
