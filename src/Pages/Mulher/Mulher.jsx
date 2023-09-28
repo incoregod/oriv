@@ -4,11 +4,7 @@ import mulherImg from "../../assets/brooke-cagle-kElEigko7PU-unsplash.webp";
 const Mulher = () => {
   return (
     <div>
-      <HeaderComponent
-        imageSrc={mulherImg}
-        title={"De Mulher"}
-        subTitle={"Para Mulheres"}
-      />
+      <HeaderComponent />
       <SideBarM />
     </div>
   );
