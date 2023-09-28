@@ -1,19 +1,14 @@
-import ProductCard from "../../Components/Cards/ProductCard";
-import Ratings from "../../Components/Ratings/Ratings";
+import ProductCard from "../Cards/ProductCard";
+import Ratings from "../Ratings/Ratings";
 import { urlFor } from "../../../client";
 import { Link } from "react-router-dom";
-const ProductsComponent = ({ produtos }) => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 50,
-      behavior: "smooth",
-    });
-  };
+import scrollTopHook from "../../Hooks/scrollTopHook";
+const ProductsComponent = ({ produtos, type }) => {
   return (
     <div className="col-span-5 grid grid-cols-1  sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center ">
       {produtos.map((item) => (
         <ProductCard key={item._id}>
-          <Link to={`/mulher/${item._id}`} onClick={scrollToTop}>
+          <Link to={`/${type}/${item._id}`} onClick={scrollTopHook()}>
             <img
               className="object-cover h-80 w-full  "
               src={urlFor(item.imgUrl)}

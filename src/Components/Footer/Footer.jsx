@@ -1,14 +1,8 @@
 import { Link } from "react-router-dom";
 import FooterContacts from "./FooterContacts";
 import FooterSocials from "./FooterSocials";
-
+import scrollTopHook from "../../Hooks/scrollTopHook";
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
   const useLinks = [
     {
       title: "CAROLINE BORGES",
@@ -72,7 +66,7 @@ const Footer = () => {
       <div className="mb-10 md:mb-20" key={link.title}>
         <h6 className="mb-4  font-semibold uppercase ">{link.title}</h6>
         {link.links.map((item) => (
-          <Link to={item.url} key={item.name} onClick={scrollToTop}>
+          <Link to={item.url} key={item.name} onClick={scrollTopHook()}>
             <p className="mb-2">{item.name}</p>
           </Link>
         ))}

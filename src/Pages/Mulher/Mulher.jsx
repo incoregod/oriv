@@ -1,11 +1,11 @@
 import HeaderComponent from "./HeaderComponent";
-import SideBarM from "./SideBarM";
-import mulherImg from "../../assets/brooke-cagle-kElEigko7PU-unsplash.webp";
+import SideBar from "./SideBar";
+
 const Mulher = () => {
   return (
     <div>
       <HeaderComponent />
-      <SideBarM />
+      <SideBar />
     </div>
   );
 };

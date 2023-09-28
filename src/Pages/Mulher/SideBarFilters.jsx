@@ -1,6 +1,6 @@
 import { BsPlus, BsDash } from "react-icons/bs";
-import { Link } from "react-router-dom";
-
+import SmSideFilter from "./smSideFilter";
+import LgSideFilter from "./LgSideFilter";
 const filters = [
   {
     id: "color",
@@ -33,12 +33,18 @@ const filters = [
   },
 ];
 
-const SideBarFilters = ({ handleSideFilters, sideFilterOpen, categorias }) => {
+const SideBarFilters = ({
+  handleSideFilters,
+  sideFilterOpen,
+  categorias,
+  smDevicesFilterOpen,
+  handleSmDevicesFilter,
+}) => {
   const renderEl = filters.map((section) => {
     return (
       <div key={section.id}>
         <div
-          className="flex items-center justify-between cursor-pointer py-5"
+          className="flex items-center justify-between cursor-pointer p-5"
           onClick={() => handleSideFilters(section.id)}
         >
           <p>{section.name}</p>
@@ -46,7 +52,7 @@ const SideBarFilters = ({ handleSideFilters, sideFilterOpen, categorias }) => {
         </div>
         {sideFilterOpen[section.id] &&
           section.options.map((option) => (
-            <div key={option.value} className="flex gap-2 p-2">
+            <div key={option.value} className="flex gap-2 p-3">
               <input type="checkbox" />
               <label>
                 {section.id === "price" ? `€ ${option.value}` : option.value}
@@ -59,22 +65,21 @@ const SideBarFilters = ({ handleSideFilters, sideFilterOpen, categorias }) => {
   });
 
   return (
-    <div className="col-span-1 h-full hidden md:block">
-      <ul className="py-5">
-        {categorias.map((category) => (
-          <li key={category.categoria}>
-            <Link
-              to={`/${category.categoria}`}
-              className="cursor-pointer block px-2 py-3"
-            >
-              {category.categoria}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <hr />
-      {renderEl}
-    </div>
+    <>
+      {!smDevicesFilterOpen ? (
+        <LgSideFilter
+          handleSmDevicesFilter={handleSmDevicesFilter}
+          categorias={categorias}
+          render={renderEl}
+        />
+      ) : (
+        <SmSideFilter
+          handleSmDevicesFilter={handleSmDevicesFilter}
+          categorias={categorias}
+          render={renderEl}
+        />
+      )}
+    </>
   );
 };
 
