@@ -22,7 +22,7 @@ const NavLinks = ({ type, handleSideBar }) => {
             />
           </div>
         )}
-        <Routes type={type} />
+        <Routes type={type} handleSideBar={handleSideBar} />
         {type && <NavFooter />}
       </div>
       {!type && <SearchCartIcons />}
