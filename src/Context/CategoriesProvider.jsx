@@ -11,14 +11,14 @@ export const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const produtosQuery =
-          '*[_type == "produtos"] {title, imgUrl, tags,description,price, "Categoria": categoria->categoria, _id}';
+        const produtosQuery = `*[_type == "produtos"] {title, imgUrl, subImages, tags,description, details, highlights,price, "Categoria": categoria->categoria, _id}`;
         const categoriasQuery = '*[_type == "categorias"]';
 
         const [produtos, categorias] = await Promise.all([
           client.fetch(produtosQuery),
           client.fetch(categoriasQuery),
         ]);
+        console.log(produtos);
         setCategoriesData(categorias);
         setProdutos(produtos);
         setIsLoading(false);

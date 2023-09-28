@@ -2,24 +2,37 @@ import model from "../../../assets/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg
 import { useContext } from "react";
 import { CategoriesContext } from "../../../Context/CategoriesProvider";
 import { urlFor } from "../../../../client";
+import { Link } from "react-router-dom";
 const TopProducts = () => {
   const { produtos } = useContext(CategoriesContext);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 50,
+      behavior: "smooth",
+    });
+  };
 
   const element = produtos.map((produto) => {
     if (!produto.tags) {
       return;
     }
-    if (produto.tags.includes("tendencias")) {
+    if (produto.tags.includes("Tendências")) {
       return (
         <div
           className="flex flex-col text-sm text-center  lg:text-xl"
           key={produto._id}
         >
-          <img
-            className="h-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
-            src={urlFor(produto.imgUrl)}
-            alt={produto.title}
-          />
+          <Link
+            to={`/mulher/${produto._id}`}
+            aria-label="Link to Produto"
+            onClick={scrollToTop}
+          >
+            <img
+              className="h-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
+              src={urlFor(produto.imgUrl)}
+              alt={produto.title}
+            />
+          </Link>
           <div className="p-2 lg:p-5">
             <p>{produto.title} </p>
             <p>{produto.price} €</p>

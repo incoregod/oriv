@@ -4,7 +4,7 @@ const HeaderComponent = ({ imageSrc, title, subTitle }) => {
       <div className="px-6 lg:py-12 text-center md:px-12 md:text-left font-playfair bg-gradient-to-b from-white via-gray-400  to-gray-50 ">
         <div className="w-100 mx-auto sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl xl:px-32">
           <div className="grid items-center max-md:grid-cols-6 md:grid-cols-2 ">
-            <div className="max-md:col-span-2 block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 -mr-14 backdrop-blur-[30px]">
+            <div className="max-md:col-span-2 block  bg-[hsla(0,0%,100%,0.55)] px-6 py-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.55)] dark:shadow-black/20 md:px-12 -mr-14 backdrop-blur-[30px]">
               <h1 className="mt-2 mb-16 text-3xl tracking-tight md:text-4xl xl:text-5xl">
                 {title} <br />
                 <hr className="my-5" />
@@ -15,7 +15,7 @@ const HeaderComponent = ({ imageSrc, title, subTitle }) => {
             <div className="md:mb-12 lg:mb-0  max-md:col-span-4">
               <img
                 src={imageSrc}
-                className="w-full h-[40rem] object-cover rounded-lg shadow-lg dark:shadow-black/20"
+                className="w-full h-[40rem] object-cover  shadow-lg dark:shadow-black/20"
                 alt=""
               />
             </div>

@@ -4,14 +4,24 @@ import { CategoriesContext } from "../../../Context/CategoriesProvider";
 import { urlFor } from "../../../../client";
 const LatestProducts = () => {
   const { produtos } = useContext(CategoriesContext);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 50,
+      behavior: "smooth",
+    });
+  };
 
   const element = produtos.map((item) => {
     if (!item.tags) return;
-    if (item.tags.includes("recentes")) {
+    if (item.tags.includes("Recentes")) {
       return (
         <div key={item._id} className="mb-12 lg:mb-0">
           <div className="relative mb-6 overflow-hidden  bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]">
-            <Link to={"/produtos"} aria-label="Link to produtos">
+            <Link
+              to={`/mulher/${item._id}`}
+              aria-label="Link to Produto"
+              onClick={scrollToTop}
+            >
               <img
                 src={urlFor(item.imgUrl)}
                 alt={`${item.title} image`}

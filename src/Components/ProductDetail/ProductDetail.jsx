@@ -20,12 +20,20 @@ const ProductDetail = () => {
                 src={urlFor(produto.imgUrl)}
                 alt="imagem"
               />
-              <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 ">
-                <img src={urlFor(produto.imgUrl)} alt={produto.title} />
-                <img src={urlFor(produto.imgUrl)} alt={produto.title} />
-                <img src={urlFor(produto.imgUrl)} alt={produto.title} />
-                <img src={urlFor(produto.imgUrl)} alt={produto.title} />
-              </div>
+              {produto.subImages && (
+                <div className="grid lg:grid-cols-4 grid-cols-2 gap-5 ">
+                  {produto.subImages.map(
+                    (imagem, index) =>
+                      index < 4 && ( //max 4 imgs
+                        <img
+                          key={imagem + index}
+                          src={urlFor(imagem)}
+                          alt={produto.title}
+                        />
+                      )
+                  )}
+                </div>
+              )}
             </div>
             <div className="font-playfair flex flex-col gap-5">
               <h1 className="text-7xl">{produto.title} </h1>
@@ -38,25 +46,28 @@ const ProductDetail = () => {
               </div>
 
               <p className="text-2xl">{produto.description} </p>
+
               <div>
-                <p className="font-semibold">Highlights</p>
-                <ul className="list-disc pt-0 p-5">
-                  <li>Hand cut and sewn locally</li>
-                  <li>Dyed with our proprietary colors</li>
-                  <li>Pre-washed & pre-shrunk</li>
-                  <li>Ultra-soft 100% cotton</li>
-                </ul>
-                <p className="font-semibold">Detalhes</p>
-                <p>
-                  Details The 6-Pack includes two black, two white, and two
-                  heather gray Basic Tees. Sign up for our subscription service
-                  and be the first to get new, exciting colors, like our
-                  upcoming limited release.
-                </p>
+                {produto.highlights && (
+                  <div>
+                    <p className="font-semibold text-gray-600">Highlights</p>
+                    <ul className="list-disc  pt-0 p-5 marker:text-gray-200">
+                      {produto.highlights.map((item, index) => (
+                        <li key={item + index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {produto.detail && (
+                  <div>
+                    <p className="font-semibold text-gray-600">Detalhes</p>
+                    <p>{produto.detail}</p>
+                  </div>
+                )}
               </div>
               {produto.Categoria === "Anéis" && (
                 <div>
-                  <p>Tamanhos</p>
+                  <p className="font-semibold text-gray-600">Tamanhos</p>
                   <div className="flex flex-wrap gap-5 items-center justify-start">
                     <div className="flex gap-1 items-center justify-center">
                       <input type="checkBox" />
