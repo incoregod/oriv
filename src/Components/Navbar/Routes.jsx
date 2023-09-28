@@ -1,18 +1,9 @@
 import { Link } from "react-router-dom";
 
 const Routes = ({ type, handleSideBar }) => {
-  const routes = [
-    "colecoes",
-    "mulher",
-    "sobre",
-    "servicos",
-    "guia",
-    "contactos",
-  ];
+  const routes = ["mulher", "sobre", "servicos", "guia", "contactos"];
   function capitalizeFirstLetter(str) {
-    if (str === "colecoes") {
-      return "Coleções";
-    } else if (str === "servicos") {
+    if (str === "servicos") {
       return "Serviços";
     }
     return str.charAt(0).toUpperCase() + str.slice(1);

@@ -1,11 +1,13 @@
+import Collections from "../../Components/Collections/Collections";
 import HeaderComponent from "./HeaderComponent";
-import SideBar from "./SideBar";
+// import SideBar from "./SideBar";
 
 const Mulher = () => {
   return (
     <div>
       <HeaderComponent />
-      <SideBar />
+      <Collections />
+      {/* <SideBar /> */}
     </div>
   );
 };

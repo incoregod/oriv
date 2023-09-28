@@ -1,7 +1,6 @@
 import Navbar from "./Components/Navbar/Navbar";
 import { useRoutes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import Colecoes from "./Pages/Colecoes/Colecoes";
 import Mulher from "./Pages/Mulher/Mulher";
 import Sobre from "./Pages/Sobre/Sobre";
 import Servicos from "./Pages/Servicos/Servicos";
@@ -9,6 +8,7 @@ import Guia from "./Pages/Guia/Guia";
 import Contactos from "./Pages/Contactos/Contactos";
 import Footer from "./Components/Footer/Footer";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
+import ColectionsProduct from "./Components/ColectionsProduct/ColectionsProduct";
 function App() {
   const element = useRoutes([
     {
@@ -16,16 +16,16 @@ function App() {
       path: "/",
     },
     {
-      element: <Colecoes />,
-      path: "/colecoes",
-    },
-    {
       element: <Mulher />,
       path: "/mulher",
     },
+    // {
+    //   element: <ProductDetail />,
+    //   path: "/mulher/:productId",
+    // },
     {
-      element: <ProductDetail />,
-      path: "/mulher/:productId",
+      element: <ColectionsProduct />,
+      path: "/mulher/:colecao",
     },
     {
       element: <Sobre />,

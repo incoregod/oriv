@@ -12,7 +12,7 @@ const sortOptions = [
   { name: "Preço: Decrescente", href: "#", current: false },
 ];
 
-const SideBar = () => {
+const SideBar = ({ colecao }) => {
   const [filtroOpen, setFiltroOpen] = useState(false);
   const [sideFilterOpen, setSideFilterOpen] = useState({
     color: false,
@@ -55,7 +55,11 @@ const SideBar = () => {
           smDevicesFilterOpen={smDevicesFilterOpen}
           handleSmDevicesFilter={handleSmDevicesFilter}
         />
-        <ProductsComponent produtos={produtos} type={"mulher"} />
+        <ProductsComponent
+          produtos={produtos}
+          colecao={colecao}
+          type={"mulher"}
+        />
       </div>
     </div>
   );
