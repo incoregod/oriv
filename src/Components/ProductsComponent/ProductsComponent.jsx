@@ -1,5 +1,4 @@
 import ProductCard from "../Cards/ProductCard";
-import Ratings from "../Ratings/Ratings";
 import { urlFor } from "../../../client";
 import { Link } from "react-router-dom";
 import scrollTopHook from "../../Hooks/scrollTopHook";
@@ -39,7 +38,6 @@ const ProductsComponent = ({ produtos, type, colecao }) => {
                     )}
                 </div>
                 <h1 className="text-xl">{item.title}</h1>
-                <Ratings />
                 <p className="text-lg px-2">€ {item.price}</p>
               </div>
             </ProductCard>

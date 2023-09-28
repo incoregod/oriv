@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import Rating from "../Ratings/Ratings";
 import { BsArrowUpRightSquare } from "react-icons/bs";
 import { useContext } from "react";
 import { CategoriesContext } from "../../Context/CategoriesProvider";
@@ -39,12 +38,6 @@ const ProductDetail = () => {
               <h1 className="text-7xl">{produto.title} </h1>
               <hr />
               <p className="text-5xl">€ {produto.price}</p>
-
-              <div className="flex gap-2 items-center">
-                <Rating />
-                <p>117 reviews</p>
-              </div>
-
               <p className="text-2xl">{produto.description} </p>
 
               <div>
