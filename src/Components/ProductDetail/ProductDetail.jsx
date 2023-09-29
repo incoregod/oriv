@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { BsArrowUpRightSquare } from "react-icons/bs";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CategoriesContext } from "../../Context/CategoriesProvider";
 import { urlFor } from "../../../client";
 import Icons from "../Icons/Icons";
@@ -10,6 +10,14 @@ const ProductDetail = () => {
   const { productName } = useParams();
   const { produtos } = useContext(CategoriesContext);
   const { addItemToCart } = useContext(ShoppingCartContext);
+  const [isProductAddedToCart, setIsProductAddedToCart] = useState(false);
+
+  function handleShowAddedToCart() {
+    setIsProductAddedToCart(true);
+    setTimeout(() => {
+      setIsProductAddedToCart(false);
+    }, 2000);
+  }
 
   const myElement = produtos.map((produto) => {
     if (productName === produto.title) {
@@ -101,7 +109,10 @@ const ProductDetail = () => {
                   bgColor={"bg-black"}
                   textColor={"text-white"}
                   styles={"hover:text-black hover:bg-white"}
-                  onClick={() => addItemToCart(produto)}
+                  onClick={() => {
+                    addItemToCart(produto);
+                    handleShowAddedToCart();
+                  }}
                 >
                   Adicionar ao carrinho
                 </Buttons>
@@ -116,6 +127,14 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
+
+          <div
+            className={`absolute bottom-10 left-10 text-white bg-black p-5 font-bold border-[1px] border-green-300  ${
+              isProductAddedToCart ? "inline-block" : "hidden"
+            }`}
+          >
+            Item Adicionado ao Carrinho
+          </div>
         </div>
       );
     }
@@ -123,7 +142,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-b from-white via-gray-400  to-gray-50 top-0 h-20 md:h-80"></div>
+      <div className="bg-gradient-to-b from-white via-gray-400  to-gray-50 top-0 h-20 md:h-80  "></div>
       {myElement}
     </>
   );
