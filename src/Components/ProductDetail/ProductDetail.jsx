@@ -129,7 +129,7 @@ const ProductDetail = () => {
           </div>
 
           <div
-            className={`absolute bottom-10 left-10 text-white bg-black p-5 font-bold border-[1px] border-green-300  ${
+            className={`absolute bottom-10 left-10 text-white bg-black p-5 font-bold border-[1px] border-green-200  ${
               isProductAddedToCart ? "inline-block" : "hidden"
             }`}
           >
