@@ -5,9 +5,11 @@ import { CategoriesContext } from "../../Context/CategoriesProvider";
 import { urlFor } from "../../../client";
 import Icons from "../Icons/Icons";
 import Buttons from "../Buttons/Buttons";
+import { ShoppingCartContext } from "../../Context/ShoppingCartProvider";
 const ProductDetail = () => {
   const { productName } = useParams();
   const { produtos } = useContext(CategoriesContext);
+  const { addItemToCart } = useContext(ShoppingCartContext);
 
   const myElement = produtos.map((produto) => {
     if (productName === produto.title) {
@@ -99,6 +101,7 @@ const ProductDetail = () => {
                   bgColor={"bg-black"}
                   textColor={"text-white"}
                   styles={"hover:text-black hover:bg-white"}
+                  onClick={() => addItemToCart(produto)}
                 >
                   Adicionar ao carrinho
                 </Buttons>
