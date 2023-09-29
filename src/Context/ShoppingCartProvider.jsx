@@ -26,13 +26,31 @@ const ShoppingCartProvider = ({ children }) => {
       if (existingProduct) {
         return prev.map((item) =>
           item.produto === produto
-            ? { ...item, qtd: quantity ? quantity : item.qtd + 1 }
+            ? {
+                ...item,
+                qtd: quantity ? parseInt(quantity) : parseInt(item.qtd) + 1,
+              }
             : item
         );
       } else {
         return [...prev, { produto, qtd: 1 }];
       }
     });
+  }
+
+  function removeItemFromCart(produto) {
+    const indexToRemove = cartProducts.findIndex((prevProd) => {
+      return produto._id === prevProd._id;
+    });
+
+    if (indexToRemove !== -1) {
+      const updatedCart = [...cartProducts];
+      updatedCart.splice(indexToRemove, 1);
+
+      setCartProducts(updatedCart);
+
+      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+    }
   }
 
   useEffect(() => {
@@ -49,6 +67,7 @@ const ShoppingCartProvider = ({ children }) => {
     addItemToCart,
     cartProducts,
     carValue,
+    removeItemFromCart,
   };
   return (
     <ShoppingCartContext.Provider value={values}>

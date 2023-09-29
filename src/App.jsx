@@ -52,6 +52,13 @@ function App() {
     <>
       <Navbar />
       <div>{element}</div>
+
+      {isCartMenuOpen && (
+        <div
+          onClick={handleSideMenu}
+          className="bg-gray-50  bg-opacity-50 w-screen h-screen fixed top-0 z-50"
+        ></div>
+      )}
       {isCartMenuOpen && <ShoppingCartSide handleSideMenu={handleSideMenu} />}
       <Footer />
     </>

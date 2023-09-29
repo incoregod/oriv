@@ -12,7 +12,7 @@ const ShoppingCartSide = ({ handleSideMenu }) => {
   const options = Array.from({ length: 10 }, (_, index) => index + 1);
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 405px)" });
-  const { cartProducts, addItemToCart, carValue } =
+  const { cartProducts, addItemToCart, carValue, removeItemFromCart } =
     useContext(ShoppingCartContext);
 
   return (
@@ -67,7 +67,10 @@ const ShoppingCartSide = ({ handleSideMenu }) => {
                     Preço {produto.produto.price * produto.qtd} €
                   </p>
                 </div>
-                <BsTrash3 className="cursor-pointer w-5 h-5" />
+                <BsTrash3
+                  className="cursor-pointer w-5 h-5"
+                  onClick={removeItemFromCart}
+                />
               </div>
             </div>
           );
