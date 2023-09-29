@@ -12,7 +12,7 @@ const ShoppingCartSide = ({ handleSideMenu }) => {
   const options = Array.from({ length: 10 }, (_, index) => index + 1);
 
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 405px)" });
-  const { cartProducts, addItemToCart, carValue, removeItemFromCart } =
+  const { cartProducts, addItemToCart, cartValue, removeItemFromCart } =
     useContext(ShoppingCartContext);
 
   return (
@@ -78,7 +78,7 @@ const ShoppingCartSide = ({ handleSideMenu }) => {
         <hr className="mt-20" />
         <div className="flex justify-between text-xl font-semibold">
           <p>Total</p>
-          <p>{carValue} €</p>
+          <p>{cartValue} €</p>
         </div>
         <div className="flex justify-center mt-5">
           <Buttons

@@ -7,7 +7,7 @@ const ShoppingCartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState(
     () => JSON.parse(localStorage.getItem("cartItems")) || []
   );
-  const [carValue, setCartValue] = useState(0);
+  const [cartValue, setCartValue] = useState(0);
 
   useEffect(() => {
     setCartValue(
@@ -21,11 +21,13 @@ const ShoppingCartProvider = ({ children }) => {
 
   function addItemToCart(produto, quantity) {
     setCartProducts((prev) => {
-      const existingProduct = prev.find((item) => item.produto === produto);
+      const existingProduct = prev.find(
+        (item) => item.produto._id === produto._id
+      );
 
       if (existingProduct) {
         return prev.map((item) =>
-          item.produto === produto
+          item.produto._id === produto._id
             ? {
                 ...item,
                 qtd: quantity ? parseInt(quantity) : parseInt(item.qtd) + 1,
@@ -37,6 +39,12 @@ const ShoppingCartProvider = ({ children }) => {
       }
     });
   }
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartProducts));
+  }, [cartProducts]);
+
+  console.log(cartProducts);
 
   function removeItemFromCart(produto) {
     const indexToRemove = cartProducts.findIndex((prevProd) => {
@@ -53,10 +61,6 @@ const ShoppingCartProvider = ({ children }) => {
     }
   }
 
-  useEffect(() => {
-    localStorage.setItem("cartItems", JSON.stringify(cartProducts));
-  }, [cartProducts]);
-
   function handleSideMenu() {
     setIsCartMenuOpen((prevVal) => !prevVal);
   }
@@ -66,7 +70,7 @@ const ShoppingCartProvider = ({ children }) => {
     handleSideMenu,
     addItemToCart,
     cartProducts,
-    carValue,
+    cartValue,
     removeItemFromCart,
   };
   return (
