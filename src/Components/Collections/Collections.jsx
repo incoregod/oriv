@@ -17,10 +17,12 @@ const Collections = () => {
       />
       <div className="flex flex-col  items-center justify-center gap-5">
         <h1 className="text-3xl text-center">Coleção {col.colecao} </h1>
-        <Link to={`/mulher/${col.colecao}`}>
-          <button className="border py-2 px-4 bg-black text-white hover:text-black hover:bg-white transition-all ease-in-out duration-300  ">
-            Ver mais
-          </button>
+        <Link
+          className="border py-2 px-4 bg-black text-white hover:text-black hover:bg-white transition-all ease-in-out duration-300  "
+          to={`/colecoes/${col.colecao}`}
+          aria-label={`Link para ${col.colecao}`}
+        >
+          Ver mais
         </Link>
       </div>
     </div>

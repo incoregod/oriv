@@ -18,7 +18,7 @@ const TopProducts = () => {
           key={produto._id}
         >
           <Link
-            to={`/mulher/${produto._id}`}
+            to={`/colecoes/${produto.colecao}/${produto.title}`}
             aria-label="Link to Produto"
             onClick={scrollTopHook()}
           >

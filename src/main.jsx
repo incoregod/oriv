@@ -5,13 +5,16 @@ import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ParallaxProvider } from "react-scroll-parallax";
 import CategoriesProvider from "./Context/CategoriesProvider.jsx";
+import ShoppingCartProvider from "./Context/ShoppingCartProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   // <React.StrictMode>
   <ParallaxProvider>
     <BrowserRouter>
       <CategoriesProvider>
-        <App />
+        <ShoppingCartProvider>
+          <App />
+        </ShoppingCartProvider>
       </CategoriesProvider>
     </BrowserRouter>
   </ParallaxProvider>

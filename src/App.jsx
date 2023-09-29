@@ -9,7 +9,11 @@ import Contactos from "./Pages/Contactos/Contactos";
 import Footer from "./Components/Footer/Footer";
 import ProductDetail from "./Components/ProductDetail/ProductDetail";
 import ColectionsProduct from "./Components/ColectionsProduct/ColectionsProduct";
+import ShoppingCartSide from "./Components/ShoppingCartSide/ShoppingCartSide";
+import { useContext } from "react";
+import { ShoppingCartContext } from "./Context/ShoppingCartProvider";
 function App() {
+  const { isCartMenuOpen, handleSideMenu } = useContext(ShoppingCartContext);
   const element = useRoutes([
     {
       element: <Home />,
@@ -17,15 +21,15 @@ function App() {
     },
     {
       element: <Mulher />,
-      path: "/mulher",
+      path: "/colecoes",
     },
     {
       element: <ProductDetail />,
-      path: "/mulher/:colecao/:productName",
+      path: "/colecoes/:colecao/:productName",
     },
     {
       element: <ColectionsProduct />,
-      path: "/mulher/:colecao",
+      path: "/colecoes/:colecao",
     },
     {
       element: <Sobre />,
@@ -48,6 +52,7 @@ function App() {
     <>
       <Navbar />
       <div>{element}</div>
+      {isCartMenuOpen && <ShoppingCartSide handleSideMenu={handleSideMenu} />}
       <Footer />
     </>
   );

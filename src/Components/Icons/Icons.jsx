@@ -2,8 +2,10 @@ import { BsPerson, BsGlobe, BsSearch } from "react-icons/bs";
 import { PiMapPinLight } from "react-icons/pi";
 import { BsSuitHeart } from "react-icons/bs";
 import { PiShoppingBagOpenThin } from "react-icons/pi";
-
+import { useContext } from "react";
+import { ShoppingCartContext } from "../../Context/ShoppingCartProvider";
 const Icons = ({ children, icon, styles }) => {
+  const { handleSideMenu } = useContext(ShoppingCartContext);
   let renderEl;
   switch (icon) {
     case "person":
@@ -19,7 +21,9 @@ const Icons = ({ children, icon, styles }) => {
       renderEl = <BsSuitHeart className={styles} />;
       break;
     case "shopcart":
-      renderEl = <PiShoppingBagOpenThin className={styles} />;
+      renderEl = (
+        <PiShoppingBagOpenThin className={styles} onClick={handleSideMenu} />
+      );
       break;
     case "search":
       renderEl = <BsSearch className={styles} />;

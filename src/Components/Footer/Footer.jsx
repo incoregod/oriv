@@ -22,7 +22,7 @@ const Footer = () => {
       links: [
         {
           name: "+ Coleção Mulher",
-          url: "/mulher",
+          url: "/colecoes",
         },
         {
           name: "+ Coleção Homem",

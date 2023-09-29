@@ -58,7 +58,7 @@ const SideBar = ({ colecao }) => {
         <ProductsComponent
           produtos={produtos}
           colecao={colecao}
-          type={"mulher"}
+          type={"colecoes"}
         />
       </div>
     </div>

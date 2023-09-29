@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { CategoriesContext } from "../../Context/CategoriesProvider";
 import { urlFor } from "../../../client";
 import Icons from "../Icons/Icons";
+import Buttons from "../Buttons/Buttons";
 const ProductDetail = () => {
   const { productName } = useParams();
   const { produtos } = useContext(CategoriesContext);
@@ -94,9 +95,13 @@ const ProductDetail = () => {
                 </div>
               )}
               <div className="flex items-center gap-5 mt-5">
-                <button className="border py-4 px-6 bg-black text-white hover:text-black hover:bg-white transition-all ease-in-out duration-300  ">
+                <Buttons
+                  bgColor={"bg-black"}
+                  textColor={"text-white"}
+                  styles={"hover:text-black hover:bg-white"}
+                >
                   Adicionar ao carrinho
-                </button>
+                </Buttons>
                 <div className="border p-1 hover:scale-125 transition-all ease-in-out duration-300">
                   <Icons
                     icon={"heart"}
