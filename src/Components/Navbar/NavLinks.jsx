@@ -23,10 +23,12 @@ const NavLinks = ({ type, handleSideBar }) => {
           {type && <NavFooter />}
         </SideBarComponent>
       ) : (
-        <div className="flex items-center justify-center gap-5 mr-auto md:gap-10 lg:text-[0.9rem] lg:gap-16 xl:gap-24 2xl:gap-32">
-          <Routes type={type} handleSideBar={handleSideBar} />
+        <>
+          <div className="flex items-center justify-center gap-5 mr-auto md:gap-10 lg:text-[0.9rem] lg:gap-16 xl:gap-24 2xl:gap-32">
+            <Routes type={type} handleSideBar={handleSideBar} />
+          </div>
           <SearchCartIcons />
-        </div>
+        </>
       )}
     </div>
   );

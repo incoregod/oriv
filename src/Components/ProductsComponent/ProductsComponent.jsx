@@ -24,18 +24,6 @@ const ProductsComponent = ({ produtos, type, colecao }) => {
                   <p className="text-xs border px-2 py-1 cursor-pointer hover:text-white hover:bg-black transition-all ease-in-out duration-300 mr-1">
                     {item.Categoria}
                   </p>
-                  {item.tags &&
-                    item.tags.map(
-                      (tag, index) =>
-                        index < 2 && ( //Não mostrar + q 2 tags.
-                          <p
-                            key={tag + index}
-                            className="text-xs border px-2 py-1 bg-gray-200 cursor-pointer hover:scale-110 transition-all ease-in-out duration-300 mr-[1px] "
-                          >
-                            {tag}
-                          </p>
-                        )
-                    )}
                 </div>
                 <h1 className="text-xl">{item.title}</h1>
                 <p className="text-lg px-2">€ {item.price}</p>
