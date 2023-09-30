@@ -17,17 +17,20 @@ const TopProducts = () => {
           className="flex flex-col text-sm text-center  lg:text-xl"
           key={produto._id}
         >
-          <Link
-            to={`/colecoes/${produto.colecao}/${produto.title}`}
-            aria-label="Link to Produto"
-            onClick={scrollTopHook()}
-          >
-            <img
-              className="h-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
-              src={urlFor(produto.imgUrl)}
-              alt={produto.title}
-            />
-          </Link>
+          <div className="max-h-full">
+            <Link
+              to={`/colecoes/${produto.colecao}/${produto.title}`}
+              aria-label="Link to Produto"
+              onClick={scrollTopHook()}
+            >
+              <img
+                className="h-full w-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
+                src={urlFor(produto.imgUrl)}
+                alt={produto.title}
+              />
+            </Link>
+          </div>
+
           <div className="p-2 lg:p-5">
             <p>{produto.title} </p>
             <p>{produto.price} €</p>
