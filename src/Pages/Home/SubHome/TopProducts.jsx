@@ -48,7 +48,9 @@ const TopProducts = () => {
         </h1>
         {element}
       </div>
-      <img className="h-full object-cover " src={model} alt="modelo" />
+      <div className="h-full">
+        <img className="h-full w-full object-cover " src={model} alt="modelo" />
+      </div>
     </div>
   );
 };
