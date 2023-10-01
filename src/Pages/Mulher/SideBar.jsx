@@ -12,7 +12,7 @@ const sortOptions = [
   { name: "Preço: Decrescente", href: "#", current: false },
 ];
 
-const SideBar = ({ colecao }) => {
+const SideBar = ({ itemGroup, type }) => {
   const [filtroOpen, setFiltroOpen] = useState(false);
   const [sideFilterOpen, setSideFilterOpen] = useState({
     color: false,
@@ -57,8 +57,8 @@ const SideBar = ({ colecao }) => {
         />
         <ProductsComponent
           produtos={produtos}
-          colecao={colecao}
-          type={"colecoes"}
+          itemGroup={itemGroup}
+          type={type}
         />
       </div>
     </div>

@@ -23,6 +23,7 @@ function App() {
       element: <Mulher />,
       path: "/colecoes",
     },
+
     {
       element: <ProductDetail />,
       path: "/colecoes/:colecao/:productName",
@@ -30,6 +31,10 @@ function App() {
     {
       element: <ColectionsProduct />,
       path: "/colecoes/:colecao",
+    },
+    {
+      element: <ColectionsProduct />,
+      path: "/categorias/:categoria",
     },
     {
       element: <Sobre />,

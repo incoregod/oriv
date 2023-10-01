@@ -13,7 +13,7 @@ export const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const produtosQuery = `*[_type == "produtos"] {title, imgUrl, subImages, tags,description, details, highlights,price, "Categoria": categoria->categoria,"Coleção": colecao->colecao, _id}`;
+        const produtosQuery = `*[_type == "produtos"] {title, imgUrl, subImages, tags,description, details, highlights,price, "categorias": categoria->categoria,"colecoes": colecao->colecao, _id}`;
         const categoriasQuery = '*[_type == "categorias"]';
         const colecoesQuery = '*[_type == "colecoes"]';
 

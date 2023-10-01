@@ -69,7 +69,7 @@ const ProductDetail = () => {
                   </div>
                 )}
               </div>
-              {produto.Categoria === "Anéis" && (
+              {produto.categorias === "Anéis" && (
                 <div>
                   <p className="font-semibold text-gray-600">Tamanhos</p>
                   <div className="flex flex-wrap gap-5 items-center justify-start">
@@ -96,7 +96,7 @@ const ProductDetail = () => {
                   </div>
                 </div>
               )}
-              {produto.Categoria === "Anéis" && (
+              {produto.categorias === "Anéis" && (
                 <div className="flex gap-1">
                   <Link to={"/guia"}>
                     <p className="text-xs">Consultar guia de tamanhos </p>

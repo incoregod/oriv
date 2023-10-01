@@ -8,6 +8,7 @@ import { Autoplay } from "swiper/modules";
 import { urlFor } from "../../client";
 
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 const SwiperSlides = ({ categorias }) => {
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1600px)",
@@ -26,11 +27,13 @@ const SwiperSlides = ({ categorias }) => {
   const element = categorias.map((cat) => {
     return (
       <SwiperSlide className="group" key={cat.categoria}>
-        <img
-          src={urlFor(cat.imgUrl)}
-          alt={cat.categoria}
-          className="h-[90%] object-cover !w-full"
-        />
+        <Link to={`/categorias/${cat.categoria}`}>
+          <img
+            src={urlFor(cat.imgUrl)}
+            alt={cat.categoria}
+            className="h-[90%] object-cover !w-full"
+          />
+        </Link>
 
         <div className="flex items-center justify-between">
           <p className="text-lg lg:text-xl group-hover:underline decoration-1 ">

@@ -2,14 +2,19 @@ import { useParams } from "react-router-dom";
 import SideBar from "../../Pages/Mulher/SideBar";
 import HeaderComponent from "../../Pages/Mulher/HeaderComponent";
 const ColectionsProduct = () => {
-  const { colecao } = useParams();
+  const { colecao, categoria } = useParams();
 
   console.log(colecao);
+  console.log(categoria);
+  const itemGroup = colecao ? colecao : categoria;
 
   return (
     <div>
       <HeaderComponent />
-      <SideBar colecao={colecao} />
+      <SideBar
+        itemGroup={itemGroup}
+        type={colecao ? "colecoes" : "categorias"}
+      />
     </div>
   );
 };
