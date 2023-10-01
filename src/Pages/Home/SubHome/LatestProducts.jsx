@@ -15,7 +15,7 @@ const LatestProducts = () => {
             <Link
               to={`/colecoes/${item.colecao}/${item.title}`}
               aria-label="Link to Produto"
-              onClick={scrollTopHook()}
+              onClick={scrollTopHook}
             >
               <img
                 src={urlFor(item.imgUrl)}

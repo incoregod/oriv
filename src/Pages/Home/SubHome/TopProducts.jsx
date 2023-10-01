@@ -6,6 +6,12 @@ import { Link } from "react-router-dom";
 import scrollTopHook from "../../../Hooks/scrollTopHook";
 const TopProducts = () => {
   const { produtos } = useContext(CategoriesContext);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const element = produtos.map((produto) => {
     if (!produto.tags) {
@@ -21,7 +27,7 @@ const TopProducts = () => {
             <Link
               to={`/colecoes/${produto.colecao}/${produto.title}`}
               aria-label="Link to Produto"
-              onClick={scrollTopHook()}
+              onClick={scrollTopHook}
             >
               <img
                 className="h-full w-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "

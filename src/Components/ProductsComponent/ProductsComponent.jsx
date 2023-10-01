@@ -11,7 +11,7 @@ const ProductsComponent = ({ produtos, type, colecao }) => {
             <ProductCard key={item._id}>
               <Link
                 to={`/${type}/${colecao}/${item.title}`}
-                onClick={scrollTopHook()}
+                onClick={scrollTopHook}
               >
                 <img
                   className="object-cover h-80 w-full  "

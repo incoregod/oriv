@@ -66,7 +66,7 @@ const Footer = () => {
       <div className="mb-10 md:mb-20" key={link.title}>
         <h6 className="mb-4  font-semibold uppercase ">{link.title}</h6>
         {link.links.map((item) => (
-          <Link to={item.url} key={item.name} onClick={scrollTopHook()}>
+          <Link to={item.url} key={item.name} onClick={scrollTopHook}>
             <p className="mb-2">{item.name}</p>
           </Link>
         ))}

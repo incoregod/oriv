@@ -1,11 +1,14 @@
-const scrollTopHook = () => {
+import { useEffect } from "react";
+
+const useScrollToTop = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-  return scrollToTop;
+
+  return scrollToTop();
 };
 
-export default scrollTopHook;
+export default useScrollToTop;
