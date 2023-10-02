@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { CategoriesContext } from "../../Context/CategoriesProvider";
 import { urlFor } from "../../../client";
+import { Link } from "react-router-dom";
 
 const SearchComponent = () => {
   const [formValue, setFormValue] = useState("");
@@ -31,19 +32,25 @@ const SearchComponent = () => {
         onChange={handleForm}
       />
       {formValue && (
-        <div className="mt-5 border p-2 absolute right-0 top-[4.7rem]  md:top-[11.5rem] md:right-20 w-40 flex flex-col gap-5 text-black bg-white font-playfair overflow-y-auto">
+        <div className="mt-5 border p-2 absolute right-0 top-[4rem]  md:top-[11.5rem] md:right-20 w-40 flex flex-col gap-5 text-black bg-white font-playfair overflow-y-auto">
           {filteredProducts.map((item) => (
-            <div
+            <Link
+              onClick={() => {
+                setFilteredProducts([]), setFormValue("");
+              }}
               key={item._id}
-              className="flex gap-5 items-center justify-start"
+              to={`/colecoes/${item.colecao}/${item.title}`}
             >
-              <img
-                className="w-1/4"
-                src={urlFor(item.imgUrl)}
-                alt={item.title}
-              />
-              <p>{item.title}</p>
-            </div>
+              <div className="flex gap-2 items-center justify-start">
+                <img
+                  className="w-1/4"
+                  src={urlFor(item.imgUrl)}
+                  alt={item.title}
+                />
+
+                <p>{item.title}</p>
+              </div>
+            </Link>
           ))}
         </div>
       )}
