@@ -48,13 +48,15 @@ const SideBar = ({ itemGroup, type }) => {
         handleSmDevicesFilter={handleSmDevicesFilter}
       />
       <div className="grid grid-cols-6 gap-5 lg:gap-12 justify-center items-center p-5">
-        <SideBarFilters
-          handleSideFilters={handleSideFilters}
-          sideFilterOpen={sideFilterOpen}
-          categorias={categorias}
-          smDevicesFilterOpen={smDevicesFilterOpen}
-          handleSmDevicesFilter={handleSmDevicesFilter}
-        />
+        {type === "colecoes" && (
+          <SideBarFilters
+            handleSideFilters={handleSideFilters}
+            sideFilterOpen={sideFilterOpen}
+            categorias={categorias}
+            smDevicesFilterOpen={smDevicesFilterOpen}
+            handleSmDevicesFilter={handleSmDevicesFilter}
+          />
+        )}
         <ProductsComponent
           produtos={produtos}
           itemGroup={itemGroup}

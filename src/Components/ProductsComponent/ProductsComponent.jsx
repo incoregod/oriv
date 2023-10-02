@@ -5,7 +5,11 @@ import scrollTopHook from "../../Hooks/scrollTopHook";
 const ProductsComponent = ({ produtos, type, itemGroup }) => {
   console.log(produtos);
   return (
-    <div className="col-span-5 grid grid-cols-1  sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center ">
+    <div
+      className={`col-span-${
+        type === "colecoes" ? 5 : 6
+      } grid grid-cols-1   sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center`}
+    >
       {produtos.map(
         (item) =>
           item[type] === itemGroup && (

@@ -3,9 +3,6 @@ import SideBar from "../../Pages/Mulher/SideBar";
 import HeaderComponent from "../../Pages/Mulher/HeaderComponent";
 const ColectionsProduct = () => {
   const { colecao, categoria } = useParams();
-
-  console.log(colecao);
-  console.log(categoria);
   const itemGroup = colecao ? colecao : categoria;
 
   return (

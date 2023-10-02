@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { BsArrowRight } from "react-icons/bs";
 import { Autoplay } from "swiper/modules";
-
+import scrollTopHook from "../Hooks/scrollTopHook";
 import { urlFor } from "../../client";
 
 import { useMediaQuery } from "react-responsive";
@@ -32,6 +32,7 @@ const SwiperSlides = ({ categorias }) => {
             src={urlFor(cat.imgUrl)}
             alt={cat.categoria}
             className="h-[90%] object-cover !w-full"
+            onClick={scrollTopHook}
           />
         </Link>
 
