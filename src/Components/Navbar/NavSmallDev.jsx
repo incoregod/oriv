@@ -11,7 +11,7 @@ const NavSmallDev = () => {
           CAROLINE BORGES
         </h1>
       </Link>
-      <SearchCartIcons />
+      <SearchCartIcons navType={"navSmall"} />
     </div>
   );
 };

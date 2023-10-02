@@ -1,9 +1,9 @@
 import Counter from "../Counter/Counter";
 import Icons from "../Icons/Icons";
-const SearchCartIcons = () => {
+const SearchCartIcons = ({ navType }) => {
   return (
     <div className="flex items-center justify-center">
-      <Icons icon={"search"} />
+      <Icons icon={"search"} navType={navType} />
       <div className="relative">
         <Counter
           bgColor={"white"}

@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { ShoppingCartContext } from "../../Context/ShoppingCartProvider";
 import SearchComponent from "../SearchComponent/SearchComponent";
 import { FaTimes } from "react-icons/fa";
-const Icons = ({ children, icon, styles }) => {
+const Icons = ({ children, icon, styles, navType }) => {
   const { handleSideMenu } = useContext(ShoppingCartContext);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   let renderEl;
@@ -48,7 +48,9 @@ const Icons = ({ children, icon, styles }) => {
   return (
     <div>
       {renderEl}
-      {isSearchOpen && <SearchComponent />}
+      {isSearchOpen && (
+        <SearchComponent navType={navType} handleSearchMenu={setIsSearchOpen} />
+      )}
       {children}
     </div>
   );
