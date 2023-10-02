@@ -2,7 +2,22 @@ import ProductCard from "../Cards/ProductCard";
 import { urlFor } from "../../../client";
 import { Link } from "react-router-dom";
 import scrollTopHook from "../../Hooks/scrollTopHook";
+import { FilterContext } from "../../Context/FilterContextProvider";
+import { useContext } from "react";
 const ProductsComponent = ({ produtos, type, itemGroup }) => {
+  const { activeFilter } = useContext(FilterContext);
+
+  function handleDisplayEl(item) {
+    if (item[type] === itemGroup) {
+      if (activeFilter) {
+        if (activeFilter === item.categorias) {
+          return true;
+        }
+      } else {
+        return true;
+      }
+    }
+  }
   return (
     <div
       className={`col-span-${
@@ -11,7 +26,7 @@ const ProductsComponent = ({ produtos, type, itemGroup }) => {
     >
       {produtos.map(
         (item) =>
-          item[type] === itemGroup && (
+          handleDisplayEl(item) && (
             <ProductCard key={item._id}>
               <Link
                 to={`/${type}/${itemGroup}/${item.title}`}

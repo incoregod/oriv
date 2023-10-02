@@ -1,6 +1,7 @@
 import { BsPlus, BsDash } from "react-icons/bs";
 import LgSideFilter from "./LgSideFilter";
 import SmSideFilter from "./SmSideFilter";
+
 const filters = [
   {
     id: "color",
