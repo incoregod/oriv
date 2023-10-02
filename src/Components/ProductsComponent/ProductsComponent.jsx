@@ -18,10 +18,11 @@ const ProductsComponent = ({ produtos, type, itemGroup }) => {
       }
     }
   }
+
   return (
     <div
-      className={`col-span-${
-        type === "colecoes" ? 5 : 6
+      className={`${
+        type === "colecoes" ? "col-span-5" : "col-span-6"
       } grid grid-cols-1   sm:grid-cols-2  max-md:col-span-full lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center`}
     >
       {produtos.map(
