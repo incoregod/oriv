@@ -1,5 +1,5 @@
 import AboutText from "./AboutText";
-import logo from "../../../../assets/logo.png";
+import logo from "../../../../assets/logo.webp";
 const About = () => {
   return (
     <div className="  flex  items-center justify-center flex-col text-gray-800 ">

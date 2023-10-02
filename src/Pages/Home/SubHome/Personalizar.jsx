@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import foto from "../../../assets/jonathan-sanchez-Ahxw0gICnKw-unsplash.jpg";
+import foto from "../../../assets/jonathan-sanchez-Ahxw0gICnKw-unsplash.webp";
 import { Parallax } from "react-scroll-parallax";
 
 const Personalizar = () => {

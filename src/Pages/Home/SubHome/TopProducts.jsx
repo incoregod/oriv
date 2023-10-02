@@ -1,4 +1,4 @@
-import model from "../../../assets/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.jpg";
+import model from "../../../assets/kateryna-hliznitsova-vbnxgxj6cJg-unsplash.webp";
 import { useContext } from "react";
 import { CategoriesContext } from "../../../Context/CategoriesProvider";
 import { urlFor } from "../../../../client";

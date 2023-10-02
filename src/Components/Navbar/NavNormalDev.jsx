@@ -1,5 +1,5 @@
 import NavLinks from "./NavLinks";
-import logo from "../../assets//logo.png";
+import logo from "../../assets//logo.webp";
 import NavTop from "./NavTop";
 import { Link } from "react-router-dom";
 import scrollTopHook from "../../Hooks/scrollTopHook";
