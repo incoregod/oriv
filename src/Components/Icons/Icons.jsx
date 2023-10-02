@@ -2,10 +2,13 @@ import { BsPerson, BsGlobe, BsSearch } from "react-icons/bs";
 import { PiMapPinLight } from "react-icons/pi";
 import { BsSuitHeart } from "react-icons/bs";
 import { PiShoppingBagOpenThin } from "react-icons/pi";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ShoppingCartContext } from "../../Context/ShoppingCartProvider";
+import SearchComponent from "../SearchComponent/SearchComponent";
+import { FaTimes } from "react-icons/fa";
 const Icons = ({ children, icon, styles }) => {
   const { handleSideMenu } = useContext(ShoppingCartContext);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   let renderEl;
   switch (icon) {
     case "person":
@@ -26,7 +29,18 @@ const Icons = ({ children, icon, styles }) => {
       );
       break;
     case "search":
-      renderEl = <BsSearch className={styles} />;
+      renderEl = !isSearchOpen ? (
+        <BsSearch
+          className={`cursor-pointer ${styles}`}
+          onClick={() => setIsSearchOpen((prev) => !prev)}
+        />
+      ) : (
+        <FaTimes
+          className="cursor-pointer"
+          onClick={() => setIsSearchOpen((prev) => !prev)}
+        />
+      );
+
       break;
     default:
       break;
@@ -34,6 +48,7 @@ const Icons = ({ children, icon, styles }) => {
   return (
     <div>
       {renderEl}
+      {isSearchOpen && <SearchComponent />}
       {children}
     </div>
   );
