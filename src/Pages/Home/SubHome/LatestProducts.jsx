@@ -13,7 +13,7 @@ const LatestProducts = () => {
         <div key={item._id} className="mb-12 lg:mb-0">
           <div className="relative mb-6 overflow-hidden  bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]">
             <Link
-              to={`/colecoes/${item.colecao}/${item.title}`}
+              to={`/colecoes/${item.colecoes}/${item.title}`}
               aria-label="Link to Produto"
               onClick={scrollTopHook}
             >

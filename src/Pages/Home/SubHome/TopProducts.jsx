@@ -25,7 +25,7 @@ const TopProducts = () => {
         >
           <div className="max-h-full">
             <Link
-              to={`/colecoes/${produto.colecao}/${produto.title}`}
+              to={`/colecoes/${produto.colecoes}/${produto.title}`}
               aria-label="Link to Produto"
               onClick={scrollTopHook}
             >

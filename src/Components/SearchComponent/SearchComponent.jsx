@@ -39,7 +39,7 @@ const SearchComponent = () => {
                 setFilteredProducts([]), setFormValue("");
               }}
               key={item._id}
-              to={`/colecoes/${item.colecao}/${item.title}`}
+              to={`/colecoes/${item.colecoes}/${item.title}`}
             >
               <div className="flex gap-2 items-center justify-start">
                 <img

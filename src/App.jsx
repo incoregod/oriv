@@ -37,6 +37,10 @@ function App() {
       path: "/categorias/:categoria",
     },
     {
+      element: <ProductDetail />,
+      path: "/categorias/:categoria/:productName",
+    },
+    {
       element: <Sobre />,
       path: "/sobre",
     },
