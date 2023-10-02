@@ -4,6 +4,7 @@ import { CategoriesContext } from "../../../Context/CategoriesProvider";
 import { urlFor } from "../../../../client";
 import { Link } from "react-router-dom";
 import scrollTopHook from "../../../Hooks/scrollTopHook";
+import { Parallax } from "react-scroll-parallax";
 const TopProducts = () => {
   const { produtos } = useContext(CategoriesContext);
   const scrollToTop = () => {
@@ -29,11 +30,13 @@ const TopProducts = () => {
               aria-label="Link to Produto"
               onClick={scrollTopHook}
             >
-              <img
-                className="h-full w-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
-                src={urlFor(produto.imgUrl)}
-                alt={produto.title}
-              />
+              <Parallax opacity={[0, 3, "ease"]}>
+                <img
+                  className="h-full w-full  object-cover   grayscale-[70%] hover:grayscale-0 transition-all duration-300 ease-in-out cursor-pointer "
+                  src={urlFor(produto.imgUrl)}
+                  alt={produto.title}
+                />
+              </Parallax>
             </Link>
           </div>
 

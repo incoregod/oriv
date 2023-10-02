@@ -3,7 +3,6 @@ import { urlFor } from "../../../client";
 import { Link } from "react-router-dom";
 import scrollTopHook from "../../Hooks/scrollTopHook";
 const ProductsComponent = ({ produtos, type, itemGroup }) => {
-  console.log(produtos);
   return (
     <div
       className={`col-span-${

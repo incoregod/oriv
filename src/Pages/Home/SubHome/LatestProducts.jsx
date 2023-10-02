@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { CategoriesContext } from "../../../Context/CategoriesProvider";
 import { urlFor } from "../../../../client";
 import scrollTopHook from "../../../Hooks/scrollTopHook";
+import { Parallax } from "react-scroll-parallax";
 const LatestProducts = () => {
   const { produtos } = useContext(CategoriesContext);
 
@@ -17,11 +18,13 @@ const LatestProducts = () => {
               aria-label="Link to Produto"
               onClick={scrollTopHook}
             >
-              <img
-                src={urlFor(item.imgUrl)}
-                alt={`${item.title} image`}
-                className="w-full  transition-all ease-in-out duration-300 hover:brightness-110"
-              />
+              <Parallax opacity={[0, 3, "ease"]}>
+                <img
+                  src={urlFor(item.imgUrl)}
+                  alt={`${item.title} image`}
+                  className="w-full  transition-all ease-in-out duration-300 hover:brightness-110"
+                />
+              </Parallax>
             </Link>
           </div>
           <h5 className="mb-4 text-xl "> {item.title} </h5>

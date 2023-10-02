@@ -6,7 +6,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { Autoplay } from "swiper/modules";
 import scrollTopHook from "../Hooks/scrollTopHook";
 import { urlFor } from "../../client";
-
+import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 const SwiperSlides = ({ categorias }) => {
@@ -28,12 +28,14 @@ const SwiperSlides = ({ categorias }) => {
     return (
       <SwiperSlide className="group" key={cat.categoria}>
         <Link to={`/categorias/${cat.categoria}`}>
-          <img
-            src={urlFor(cat.imgUrl)}
-            alt={cat.categoria}
-            className="h-[90%] object-cover !w-full"
-            onClick={scrollTopHook}
-          />
+          <Parallax opacity={[0, 3, "ease"]}>
+            <img
+              src={urlFor(cat.imgUrl)}
+              alt={cat.categoria}
+              className="h-[90%] object-cover !w-full"
+              onClick={scrollTopHook}
+            />
+          </Parallax>
         </Link>
 
         <div className="flex items-center justify-between">

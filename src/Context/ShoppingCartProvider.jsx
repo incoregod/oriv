@@ -44,8 +44,6 @@ const ShoppingCartProvider = ({ children }) => {
     localStorage.setItem("cartItems", JSON.stringify(cartProducts));
   }, [cartProducts]);
 
-  console.log(cartProducts);
-
   function removeItemFromCart(produto) {
     const indexToRemove = cartProducts.findIndex((prevProd) => {
       return produto._id === prevProd._id;

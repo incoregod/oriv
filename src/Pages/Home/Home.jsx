@@ -18,7 +18,7 @@ const Home = () => {
         </Parallax>
       </section>
       <section className="py-10 px-5 md:px-10 lg:p-20 bg-white">
-        <Parallax translateY={[10, -20]}>
+        <Parallax translateY={[10, 0]}>
           <Carou />
         </Parallax>
       </section>
