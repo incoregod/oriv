@@ -28,7 +28,7 @@ const Navbar = () => {
         {isTabletOrMobile && <NavSmallDev />}
         <div className="bg-gradientgray  bg-opacity-50 p-3 ">
           {isDesktopOrLaptop && !showElement && <NavNormalDev />}
-          {showElement && <NavSmallDev />}
+          {isDesktopOrLaptop && showElement && <NavSmallDev />}
         </div>
       </div>
     </>
